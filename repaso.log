@@ -196,3 +196,9 @@
 [2024-03-11 17:19:35] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
 [2024-03-11 17:19:35] [ INFO ] [DomicilioDaoH2:55] Este es el id: 4
 [2024-03-11 17:19:35] [ INFO ] [DomicilioDaoH2:45] SE CREO EL PACIENTE 4
+[2024-03-11 17:42:12] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-11 17:42:12] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-11 17:42:39] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-11 17:42:39] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-11 17:47:30] [ INFO ] [DomicilioDaoH2:60] Estamos buscando el id
+[2024-03-11 17:48:36] [ INFO ] [DomicilioDaoH2:60] Estamos buscando el id

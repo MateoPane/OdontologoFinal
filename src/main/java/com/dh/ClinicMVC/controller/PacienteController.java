@@ -24,7 +24,7 @@ public class PacienteController {
         return paciente;
     }
     @DeleteMapping("/{id}")
-    public void Paciente(@PathVariable Integer id) {
+    public void eliminar(@PathVariable Integer id) {
         pacienteService.eliminar(id);
     }
     @GetMapping("/listar")

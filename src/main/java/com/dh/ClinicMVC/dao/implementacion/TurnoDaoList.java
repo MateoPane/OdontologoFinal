@@ -29,16 +29,33 @@ public class TurnoDaoList implements IDao<Turno> {
 
     @Override
     public void eliminar(Integer id) {
-        
+        Turno turnoAEliminar= null;
+        for (Turno t: turnoList) {
+            if(t.getId().equals(id)){
+                turnoAEliminar = t;
+                break;
+            }
+        }
+        if (turnoAEliminar != null) {
+            turnoList.remove(turnoAEliminar);
+        }
     }
 
     @Override
     public void actualizar(Turno turno) {
+        for(Turno turnoDado : turnoList){
+            if (turnoDado.getId().equals(turno.getId())) {
+                turnoDado.setFecha(turno.getFecha());
+                turnoDado.setOdontologo(turno.getOdontologo());
+                turnoDado.setPaciente(turno.getPaciente());
+                break;
+            }
+        }
 
     }
 
     @Override
     public List<Turno> listarTodos() {
-        return null;
+        return new ArrayList<>(turnoList);
     }
 }
