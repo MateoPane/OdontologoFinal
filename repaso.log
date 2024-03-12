@@ -202,3 +202,7 @@
 [2024-03-11 17:42:39] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
 [2024-03-11 17:47:30] [ INFO ] [DomicilioDaoH2:60] Estamos buscando el id
 [2024-03-11 17:48:36] [ INFO ] [DomicilioDaoH2:60] Estamos buscando el id
+[2024-03-11 17:53:34] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-11 17:53:34] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-11 17:53:42] [ INFO ] [TurnoController:35] Estamos guardando un turnocom.dh.ClinicMVC.model.Turno@71c0f7e3
+[2024-03-11 17:53:43] [ INFO ] [DomicilioDaoH2:60] Estamos buscando el id
