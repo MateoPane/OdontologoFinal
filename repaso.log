@@ -447,3 +447,71 @@
 [2024-03-12 10:50:51] [ INFO ] [DomicilioDaoH2:74] De apellido: Vivinetto
 [2024-03-12 10:50:51] [ INFO ] [DomicilioDaoH2:75] Con numero de documento: 44.333.222
 [2024-03-12 10:50:51] [ INFO ] [DomicilioDaoH2:76] Ingreso el: 2023-12-24
+[2024-03-12 11:01:48] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-12 11:01:48] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-12 11:01:54] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 11:01:55] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 11:01:56] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 11:01:57] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 11:01:59] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 11:01:59] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:55] Este es el id: 1
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 1
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:55] Este es el id: 2
+[2024-03-12 11:02:00] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 2
+[2024-03-12 11:02:01] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 11:02:01] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 11:02:01] [ INFO ] [DomicilioDaoH2:55] Este es el id: 3
+[2024-03-12 11:02:01] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 3
+[2024-03-12 11:02:02] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 11:02:02] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 11:02:02] [ INFO ] [DomicilioDaoH2:55] Este es el id: 4
+[2024-03-12 11:02:02] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 4
+[2024-03-12 11:02:04] [ INFO ] [TurnoController:34] Estamos guardando un turnocom.dh.ClinicMVC.model.Turno@1dd7c366
+[2024-03-12 11:02:04] [ INFO ] [OdontologoDaoH2:69] El ID del odontologo asignado es: 2
+[2024-03-12 11:02:04] [ INFO ] [OdontologoDaoH2:70] El Nombre del odontologo es: Mateo
+[2024-03-12 11:02:04] [ INFO ] [OdontologoDaoH2:71] Con numero de matricula:  243246234
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:61] Buscando paciente por id: 3
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:85] El domicilio encontrado es: Domicilio con id=3, calle= Calle 1, numero=123, localidad='Godoy cruz, provincia='Mendoza
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:73] El nombre del paciente encontrado: Franco
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:74] De apellido: Vivinetto
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:75] Con numero de documento: 44.333.222
+[2024-03-12 11:02:04] [ INFO ] [DomicilioDaoH2:76] Ingreso el: 2023-12-24
+[2024-03-12 20:42:33] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-12 20:42:33] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-12 20:43:09] [ INFO ] [TurnoController:34] Estamos guardando un turnocom.dh.ClinicMVC.model.Turno@2c80b83e
+[2024-03-12 20:43:24] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 20:43:25] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 20:43:36] [ INFO ] [OdontologoDaoH2:23] Estamos guardando un odontologo
+[2024-03-12 20:43:40] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 20:43:40] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 20:43:41] [ INFO ] [DomicilioDaoH2:55] Este es el id: 1
+[2024-03-12 20:43:41] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 1
+[2024-03-12 20:43:45] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 20:43:45] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 20:43:46] [ INFO ] [DomicilioDaoH2:55] Este es el id: 2
+[2024-03-12 20:43:46] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 2
+[2024-03-12 20:43:56] [ INFO ] [TurnoController:34] Estamos guardando un turnocom.dh.ClinicMVC.model.Turno@645eaee6
+[2024-03-12 20:43:56] [ INFO ] [OdontologoDaoH2:69] El ID del odontologo asignado es: 2
+[2024-03-12 20:43:56] [ INFO ] [OdontologoDaoH2:70] El Nombre del odontologo es: Mateo
+[2024-03-12 20:43:56] [ INFO ] [OdontologoDaoH2:71] Con numero de matricula:  243246234
+[2024-03-12 20:43:56] [ INFO ] [DomicilioDaoH2:61] Buscando paciente por id: 3
+[2024-03-12 20:43:56] [ INFO ] [DomicilioDaoH2:92] No se encontro ningun paciente con ID: 3
+[2024-03-12 20:44:19] [ INFO ] [DomicilioDaoH2:25] Estamos guardando un domicilio
+[2024-03-12 20:44:19] [ INFO ] [DomicilioDaoH2:27] Estamos guardando un domicilio
+[2024-03-12 20:44:19] [ INFO ] [DomicilioDaoH2:55] Este es el id: 3
+[2024-03-12 20:44:19] [ INFO ] [DomicilioDaoH2:46] SE CREO EL PACIENTE 3
+[2024-03-12 20:44:25] [ INFO ] [TurnoController:34] Estamos guardando un turnocom.dh.ClinicMVC.model.Turno@11590079
+[2024-03-12 20:44:25] [ INFO ] [OdontologoDaoH2:69] El ID del odontologo asignado es: 2
+[2024-03-12 20:44:25] [ INFO ] [OdontologoDaoH2:70] El Nombre del odontologo es: Mateo
+[2024-03-12 20:44:25] [ INFO ] [OdontologoDaoH2:71] Con numero de matricula:  243246234
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:61] Buscando paciente por id: 3
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:85] El domicilio encontrado es: Domicilio con id=3, calle= Calle 1, numero=123, localidad='Godoy cruz, provincia='Mendoza
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:73] El nombre del paciente encontrado: Marina
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:74] De apellido: Vivinetto
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:75] Con numero de documento: 44.333.222
+[2024-03-12 20:44:25] [ INFO ] [DomicilioDaoH2:76] Ingreso el: 2023-12-24
+[2024-03-12 20:58:16] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-12 20:58:16] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos

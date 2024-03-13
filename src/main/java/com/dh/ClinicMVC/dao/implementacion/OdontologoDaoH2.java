@@ -116,6 +116,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
         psUpdate.setString(1, odontologo.getNombre());
         psUpdate.setString(2, odontologo.getApellido());
         psUpdate.setString(3, odontologo.getMatricula());
+        psUpdate.setInt(4, odontologo.getId());
 
         psUpdate.executeUpdate();
 
