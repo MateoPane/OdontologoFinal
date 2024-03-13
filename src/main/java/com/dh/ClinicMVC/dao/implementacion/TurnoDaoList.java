@@ -2,12 +2,20 @@ package com.dh.ClinicMVC.dao.implementacion;
 
 import com.dh.ClinicMVC.dao.IDao;
 import com.dh.ClinicMVC.model.Turno;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class TurnoDaoList implements IDao<Turno> {
-    private List<Turno> turnoList = new ArrayList<>();
+    private List<Turno> turnoList;
+
+    @Autowired
+    public TurnoDaoList(){
+        this.turnoList = new ArrayList<>();
+    }
     @Override
     public Turno guardar(Turno turno) {
         turnoList.add(turno);

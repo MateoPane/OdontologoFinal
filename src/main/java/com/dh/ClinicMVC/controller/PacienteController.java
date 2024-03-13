@@ -1,6 +1,8 @@
 package com.dh.ClinicMVC.controller;
 import com.dh.ClinicMVC.model.Paciente;
 import com.dh.ClinicMVC.service.IPacienteService;
+import com.dh.ClinicMVC.service.implementation.PacienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +12,8 @@ import java.util.List;
 public class PacienteController {
     private IPacienteService pacienteService;
 
-    public PacienteController(IPacienteService pacienteService) {
+    @Autowired
+    public PacienteController(PacienteService pacienteService) {
         this.pacienteService = pacienteService;
     }
 

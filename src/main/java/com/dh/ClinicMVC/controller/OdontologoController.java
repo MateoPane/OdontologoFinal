@@ -1,10 +1,9 @@
 package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.model.Odontologo;
-import com.dh.ClinicMVC.model.Paciente;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.implementation.OdontologoService;
-import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +14,7 @@ import java.util.List;
 public class OdontologoController {
     private IOdontologoService odontologoService;
 
+    @Autowired
     public OdontologoController(OdontologoService odontologoService) {
         this.odontologoService = odontologoService;
     }

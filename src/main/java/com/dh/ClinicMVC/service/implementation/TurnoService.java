@@ -4,6 +4,7 @@ import com.dh.ClinicMVC.dao.IDao;
 import com.dh.ClinicMVC.dao.implementacion.TurnoDaoList;
 import com.dh.ClinicMVC.model.Turno;
 import com.dh.ClinicMVC.service.ITurnoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +13,9 @@ import java.util.List;
 public class TurnoService implements ITurnoService {
 
     private IDao<Turno> iDao;
-
-    public TurnoService() {
-        iDao = new TurnoDaoList();
+@Autowired
+    public TurnoService(TurnoDaoList iDao) {
+        this.iDao = iDao;
     }
 
     @Override

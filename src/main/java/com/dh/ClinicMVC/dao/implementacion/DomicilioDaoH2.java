@@ -4,6 +4,7 @@ import com.dh.ClinicMVC.dao.BD;
 import com.dh.ClinicMVC.dao.IDao;
 import com.dh.ClinicMVC.model.Domicilio;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +13,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class DomicilioDaoH2 implements IDao<Domicilio> {
 
     private static final Logger LOGGER = Logger.getLogger(DomicilioDaoH2.class);

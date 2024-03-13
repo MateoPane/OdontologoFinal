@@ -33,6 +33,10 @@ public class BD {
 
     private static final String SQL_INSERT_ODONTOLOGOS = "INSERT INTO ODONTOLOGOS (NOMBRE, APELLIDO, MATRICULA) " +
             "VALUES ('Diego', 'Gimenez', '123')";
+    private static final String SQL_INSERT_PACIENTES = "INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA_INGRESO, DOMICILIO_ID) " +
+            "VALUES ('Diego', 'Gimenez', '123','2024-02-07', 1)";
+    private static final String SQL_INSERT_DOMICILIOS = "INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) " +
+            "VALUES ('Calle', 1, 'localidad','provincia')";
 
 
     public static Connection getConnection() throws Exception {
@@ -51,6 +55,8 @@ public class BD {
             statement.execute(SQL_DROP_CREATE_PACIENTES);
             statement.execute(SQL_DROP_CREATE_DOMICILIOS);
             statement.execute(SQL_DROP_CREATE_ODONTOLOGOS);
+            statement.execute(SQL_INSERT_DOMICILIOS);
+            statement.execute(SQL_INSERT_PACIENTES);
             LOGGER.info("se creo la tabla odontologos");
             statement.execute(SQL_INSERT_ODONTOLOGOS);
             LOGGER.info("se insertó un valor en la tabla odontologos");

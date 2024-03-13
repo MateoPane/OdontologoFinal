@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
         };
         //invocamos utilizando la función fetch la API odontólogos con el método POST que guardará
         //el odontólogo que enviaremos en formato JSON
-        const url = '/odontologos';
+        const url = '/odontologos/guardar';
         const settings = {
             method: 'POST',
             headers: {
