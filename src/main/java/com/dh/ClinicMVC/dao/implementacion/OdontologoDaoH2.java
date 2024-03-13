@@ -66,6 +66,9 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
                 odontologo.setNombre(rs.getString(2));
                 odontologo.setApellido(rs.getString(3));
                 odontologo.setMatricula(rs.getString(4));
+                LOGGER.info("El ID del odontologo asignado es: " + rs.getInt(1));
+                LOGGER.info("El Nombre del odontologo es: " + rs.getString(2));
+                LOGGER.info("Con numero de matricula:  " + rs.getString(4));
             }
 
         }catch (Exception e){

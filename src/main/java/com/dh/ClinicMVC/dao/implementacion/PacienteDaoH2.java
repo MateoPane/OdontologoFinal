@@ -7,6 +7,7 @@ import com.dh.ClinicMVC.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,28 +58,27 @@ public class PacienteDaoH2 implements IDao<Paciente> {
     }
     @Override
     public Paciente buscarPorId(Integer id) {
-        LOGGER.info("Estamos buscando el id");
+        LOGGER.info("Buscando paciente por id: " + id);
         Connection connection = null;
         Paciente paciente = null;
         try {
             connection = BD.getConnection();
-            PreparedStatement psId = connection.prepareStatement(SELECT_ID);
-            psId.setInt(1, id);
-            ResultSet rs = psId.executeQuery();
-
-            while(rs.next()){
-            paciente = new Paciente();
-            paciente.setId(rs.getInt(1));
-            paciente.setNombre(rs.getString(2));
-            paciente.setApellido(rs.getString(3));
-            paciente.setDni(rs.getString(4));
-            paciente.setFechaIngreso(rs.getDate(5).toLocalDate());
+            PreparedStatement ps = connection.prepareStatement(SELECT_ID);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
 
             DomicilioDaoH2 domicilioDaoH2 = new DomicilioDaoH2();
-            Domicilio domicilio = domicilioDaoH2.buscarPorId(rs.getInt(6));
-            paciente.setDomicilio(domicilio);
+            while (rs.next()) {
+                Domicilio domicilio = domicilioDaoH2.buscarPorId(rs.getInt(6));
+                LOGGER.info("El nombre del paciente encontrado: " + rs.getString(2));
+                LOGGER.info("De apellido: " + rs.getString(3));
+                LOGGER.info("Con numero de documento: " + rs.getString(4));
+                LOGGER.info("Ingreso el: " + rs.getDate(5));
+
+                paciente = new Paciente(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4), rs.getDate(5).toLocalDate(), domicilio);
             }
-            LOGGER.info("El id es: "+ paciente.getId());
+
         }catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -87,6 +87,9 @@ public class PacienteDaoH2 implements IDao<Paciente> {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+        if (paciente == null) {
+            LOGGER.info("No se encontro ningun paciente con ID: " + id);
         }
         return paciente;
     }

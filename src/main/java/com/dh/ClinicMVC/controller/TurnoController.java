@@ -4,8 +4,6 @@ import com.dh.ClinicMVC.model.Turno;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;
-import com.dh.ClinicMVC.service.implementation.OdontologoService;
-import com.dh.ClinicMVC.service.implementation.PacienteService;
 import com.dh.ClinicMVC.service.implementation.TurnoService;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
@@ -23,7 +21,7 @@ public class TurnoController {
     private IOdontologoService odontologoService;
     private IPacienteService pacienteService;
 
-    public TurnoController(TurnoService turnoService, OdontologoService odontologoService, PacienteService pacienteService) {
+    public TurnoController(TurnoService turnoService, IOdontologoService odontologoService, IPacienteService pacienteService) {
         this.turnoService = turnoService;
         this.odontologoService = odontologoService;
         this.pacienteService = pacienteService;
