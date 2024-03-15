@@ -44,9 +44,10 @@ public class TurnoDaoList implements IDao<Turno> {
                 break;
             }
         }
-        if (turnoAEliminar != null) {
-            turnoList.remove(turnoAEliminar);
+        if (turnoAEliminar == null) {
+            throw new RuntimeException("Turno con id " + id + " no encontrado");
         }
+            turnoList.remove(turnoAEliminar);
     }
 
     @Override

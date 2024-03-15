@@ -624,3 +624,8 @@
 [2024-03-12 23:03:42] [ INFO ] [BD:60] se creo la tabla odontologos
 [2024-03-12 23:03:42] [ INFO ] [BD:62] se insertó un valor en la tabla odontologos
 [2024-03-12 23:04:39] [ INFO ] [DomicilioDaoH2:87] El domicilio encontrado es: Domicilio con id=1, calle= Calle, numero=1, localidad='localidad, provincia='provincia
+[2024-03-13 20:49:35] [ INFO ] [BD:54] se creo la tabla odontologos
+[2024-03-13 20:49:35] [ INFO ] [BD:56] se insertó un valor en la tabla odontologos
+[2024-03-13 20:51:48] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
+[2024-03-13 20:52:08] [ INFO ] [OdontologoDaoH2:25] Estamos guardando un odontologo
+[2024-03-13 20:52:12] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
