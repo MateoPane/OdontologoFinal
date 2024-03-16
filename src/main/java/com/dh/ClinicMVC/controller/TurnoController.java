@@ -1,6 +1,4 @@
 package com.dh.ClinicMVC.controller;
-
-import com.dh.ClinicMVC.entity.Odontologo;
 import com.dh.ClinicMVC.entity.Turno;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;

@@ -13,7 +13,7 @@ public interface IOdontologoRepository extends JpaRepository<Odontologo, Long> {
 
     List<Odontologo> listarTodos();
 
-    Optional<Odontologo> buscarPorId(Integer id);
-    void eliminar(Integer id);
+    Optional<Odontologo> buscarPorId(Long id);
+    void eliminar(Long id);
     void actualizar(Odontologo odontologo);
 }

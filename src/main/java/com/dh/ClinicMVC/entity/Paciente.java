@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "pacientes")
@@ -22,6 +24,10 @@ public class Paciente {
     private String apellido;
     private String dni;
     private LocalDate fechaIngreso;
+    @OneToOne
     private Domicilio domicilio;
+
+    @OneToMany(mappedBy = "paciente")
+    private Set<Turno> turnoSet = new HashSet<>();
 
 }

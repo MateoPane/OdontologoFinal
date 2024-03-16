@@ -22,6 +22,6 @@ public class Odontologo {
     private String nombre;
     private String apellido;
     private String matricula;
-    @OneToMany(mappedBy = "odontologos", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "odontologo")
     private Set<Turno> turnoSet = new HashSet<>();
 }
