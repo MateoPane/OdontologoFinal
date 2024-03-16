@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class PacienteService implements IPacienteService {
     private IDao<Paciente> iDao;
-    
+
     @Autowired
     public PacienteService(PacienteDaoH2 pacienteDaoH2) {
         this.iDao = pacienteDaoH2;
