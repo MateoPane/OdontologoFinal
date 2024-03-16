@@ -10,9 +10,9 @@ public interface ITurnoService {
 
     List<Turno> listarTodos();
 
-    Optional<Turno> buscarPorId(Integer id);
+    Optional<Turno> buscarPorId(Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     void actualizar(Turno turno);
 }

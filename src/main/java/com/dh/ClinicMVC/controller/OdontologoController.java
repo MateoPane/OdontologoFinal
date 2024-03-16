@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/odontologos")
@@ -24,12 +25,17 @@ public class OdontologoController {
         return odontologoService.guardar(odontologo);
     }
     @GetMapping("/{id}")
-    public Odontologo buscarPorId(@PathVariable Integer id) {
-        Odontologo odontologo = odontologoService.buscarPorId(id);
-        return odontologo;
+    public ResponseEntity<Odontologo> buscarPorId(@PathVariable Long id) {
+        Optional<Odontologo> odontologoOptional = odontologoService.buscarPorId(id);
+        if (odontologoOptional.isPresent()) {
+            Odontologo odontologo = odontologoOptional.get();
+            return ResponseEntity.ok(odontologo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Integer id) {
+    public void eliminar(@PathVariable Long id) {
         odontologoService.eliminar(id);
     }
     @GetMapping("/listar")
@@ -39,7 +45,7 @@ public class OdontologoController {
     @PutMapping
     public ResponseEntity<String> actualizar(@RequestBody Odontologo odontologo) {
         ResponseEntity<String> response;
-        Odontologo odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
         if (odontologoBuscado != null){
             odontologoService.actualizar(odontologo);
             response = ResponseEntity.ok("Se actualizo el odontologo con id " + odontologo.getId());

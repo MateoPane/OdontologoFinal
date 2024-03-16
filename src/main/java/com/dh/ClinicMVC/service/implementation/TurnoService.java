@@ -29,7 +29,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public Optional<Turno> buscarPorId(Integer id) {
+    public Optional<Turno> buscarPorId(Long id) {
         Optional<Turno> turnoOptional = turnoRepository.findById(id);
         if (turnoOptional.isPresent()) {
             return turnoOptional;
@@ -39,7 +39,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eliminar(Long id) {
         turnoRepository.deleteById(id);
     }
 

@@ -30,7 +30,7 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public Optional<Odontologo> buscarPorId(Integer id) {
+    public Optional<Odontologo> buscarPorId(Long id) {
         Optional<Odontologo> odontologoOptional = odontologoRepository.findById(id);
         if(odontologoOptional.isPresent()) {
             return odontologoOptional;
@@ -41,7 +41,7 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eliminar(Long id) {
         //dudas
         odontologoRepository.deleteById(id);
     }

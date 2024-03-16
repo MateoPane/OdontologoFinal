@@ -29,7 +29,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public Optional<Paciente> buscarPorId(Integer id) {
+    public Optional<Paciente> buscarPorId(Long id) {
         Optional<Paciente> pacienteOptional = pacienteRepository.findById(id);
         if (pacienteOptional.isPresent()){
             return pacienteOptional;
@@ -39,7 +39,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eliminar(Long id) {
         pacienteRepository.deleteById(id);
     }
 

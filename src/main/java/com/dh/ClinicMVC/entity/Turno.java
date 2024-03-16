@@ -1,58 +1,26 @@
 package com.dh.ClinicMVC.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "turnos")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private LocalDate fecha;
+    @ManyToOne(fetch = FetchType.LAZY)
     private Odontologo odontologo;
     private Paciente paciente;
 
-    public Turno(Integer id, LocalDate fecha, Odontologo odontologo, Paciente paciente) {
-            this.id = id;
-            this.fecha = fecha;
-            this.odontologo = odontologo;
-            this.paciente = paciente;
-    }
-
-    public Turno() {
-    }
-
-    public Integer getId() {
-            return id;
-    }
-
-    public void setId(Integer id) {
-            this.id = id;
-    }
-
-    public LocalDate getFecha() {
-            return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public Odontologo getOdontologo() {
-        return odontologo;
-    }
-
-    public void setOdontologo(Odontologo odontologo) {
-        this.odontologo = odontologo;
-    }
-
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
-    }
-    }
+}

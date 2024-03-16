@@ -1,5 +1,6 @@
 package com.dh.ClinicMVC.controller;
 
+import com.dh.ClinicMVC.entity.Odontologo;
 import com.dh.ClinicMVC.entity.Turno;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
@@ -14,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -46,7 +48,7 @@ public class TurnoController {
         return response;
     }
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Integer id){
+    public void eliminar(@PathVariable Long id){
         turnoService.eliminar(id);
     }
     @GetMapping
@@ -55,17 +57,18 @@ public class TurnoController {
         return ResponseEntity.ok(turnos);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Turno> buscarPorId(@PathVariable Integer id) {
-        Turno turno = turnoService.buscarPorId(id);
+    public ResponseEntity<Turno> buscarPorId(@PathVariable Long id) {
+        Optional<Turno> turno = turnoService.buscarPorId(id);
         if (turno != null) {
-            return ResponseEntity.ok(turno);
+            Turno turno1 = turno.get();
+            return ResponseEntity.ok(turno1);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Turno> actualizar(@PathVariable Integer id, @RequestBody Turno turnoNuevo) {
-        Turno turnoDado = turnoService.buscarPorId(id);
+    public ResponseEntity<Turno> actualizar(@PathVariable Long id, @RequestBody Turno turnoNuevo) {
+        Optional<Turno> turnoDado = turnoService.buscarPorId(id);
         if (turnoDado != null) {
             turnoService.actualizar(turnoNuevo);
             return ResponseEntity.ok(turnoNuevo);

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -22,12 +23,12 @@ public class PacienteController {
         return pacienteService.guardar(paciente);
     }
     @GetMapping("/{id}")
-    public Paciente buscarPorId(@PathVariable Integer id) {
-        Paciente paciente = pacienteService.buscarPorId(id);
+    public Optional<Paciente> buscarPorId(@PathVariable Long id) {
+        Optional<Paciente> paciente = pacienteService.buscarPorId(id);
         return paciente;
     }
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Integer id) {
+    public void eliminar(@PathVariable Long id) {
         pacienteService.eliminar(id);
     }
     @GetMapping("/listar")

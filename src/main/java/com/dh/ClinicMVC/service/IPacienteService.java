@@ -8,7 +8,7 @@ public interface IPacienteService {
     Paciente guardar(Paciente paciente);
     List<Paciente> listarTodos();
 
-    Optional<Paciente> buscarPorId(Integer id);
-    void eliminar(Integer id);
+    Optional<Paciente> buscarPorId(Long id);
+    void eliminar(Long id);
     void actualizar(Paciente paciente);
 }
