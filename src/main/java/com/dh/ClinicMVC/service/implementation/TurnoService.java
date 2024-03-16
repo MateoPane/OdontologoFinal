@@ -1,45 +1,50 @@
 package com.dh.ClinicMVC.service.implementation;
 
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.dao.implementacion.TurnoDaoList;
-import com.dh.ClinicMVC.model.Turno;
+import com.dh.ClinicMVC.entity.Turno;
+import com.dh.ClinicMVC.repository.ITurnoRepository;
 import com.dh.ClinicMVC.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TurnoService implements ITurnoService {
 
-    private IDao<Turno> iDao;
+    private ITurnoRepository turnoRepository;
 @Autowired
-    public TurnoService(TurnoDaoList iDao) {
-        this.iDao = iDao;
+    public TurnoService(ITurnoRepository turnoRepository) {
+        this.turnoRepository = turnoRepository;
     }
 
     @Override
     public Turno guardar(Turno turno) {
-        return iDao.guardar(turno);
+        return turnoRepository.save(turno);
     }
 
     @Override
     public List<Turno> listarTodos() {
-        return iDao.listarTodos();
+        return turnoRepository.findAll();
     }
 
     @Override
-    public Turno buscarPorId(Integer id) {
-        return iDao.buscarPorId(id);
+    public Optional<Turno> buscarPorId(Integer id) {
+        Optional<Turno> turnoOptional = turnoRepository.findById(id);
+        if (turnoOptional.isPresent()) {
+            return turnoOptional;
+        }else {
+            return null;
+        }
     }
 
     @Override
     public void eliminar(Integer id) {
-        iDao.eliminar(id);
+        turnoRepository.deleteById(id);
     }
 
     @Override
     public void actualizar(Turno turno) {
-        iDao.actualizar(turno);
+        turnoRepository.save(turno);
     }
 }

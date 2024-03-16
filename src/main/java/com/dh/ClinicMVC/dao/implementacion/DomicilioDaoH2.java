@@ -1,8 +1,6 @@
 package com.dh.ClinicMVC.dao.implementacion;
 
-import com.dh.ClinicMVC.dao.BD;
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.model.Domicilio;
+import com.dh.ClinicMVC.entity.Domicilio;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 

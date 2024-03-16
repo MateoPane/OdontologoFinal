@@ -1,8 +1,14 @@
-package com.dh.ClinicMVC.model;
+package com.dh.ClinicMVC.entity;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pacientes")
 public class Paciente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private String apellido;

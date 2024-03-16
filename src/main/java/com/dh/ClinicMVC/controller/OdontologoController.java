@@ -1,6 +1,6 @@
 package com.dh.ClinicMVC.controller;
 
-import com.dh.ClinicMVC.model.Odontologo;
+import com.dh.ClinicMVC.entity.Odontologo;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.implementation.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;

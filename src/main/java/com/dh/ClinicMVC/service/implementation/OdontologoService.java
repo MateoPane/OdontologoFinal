@@ -1,46 +1,53 @@
 package com.dh.ClinicMVC.service.implementation;
 
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.dao.implementacion.OdontologoDaoH2;
-import com.dh.ClinicMVC.model.Odontologo;
+import com.dh.ClinicMVC.entity.Odontologo;
+import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OdontologoService implements IOdontologoService {
 
-    private IDao<Odontologo> iDao;
+    private IOdontologoRepository odontologoRepository;
 
     @Autowired
-    public OdontologoService(OdontologoDaoH2 odontologoDaoH2) {
-        this.iDao = odontologoDaoH2;
+    public OdontologoService(IOdontologoRepository odontologoRepository) {
+        this.odontologoRepository = odontologoRepository;
     }
 
     @Override
     public Odontologo guardar(Odontologo odontologo) {
-        return iDao.guardar(odontologo);
+        return odontologoRepository.save(odontologo);
     }
 
     @Override
     public List<Odontologo> listarTodos() {
-        return iDao.listarTodos();
+        return odontologoRepository.findAll();
     }
 
     @Override
-    public Odontologo buscarPorId(Integer id) {
-        return iDao.buscarPorId(id);
+    public Optional<Odontologo> buscarPorId(Integer id) {
+        Optional<Odontologo> odontologoOptional = odontologoRepository.findById(id);
+        if(odontologoOptional.isPresent()) {
+            return odontologoOptional;
+        } else {
+            return null;
+        }
+
     }
 
     @Override
     public void eliminar(Integer id) {
-        iDao.eliminar(id);
+        //dudas
+        odontologoRepository.deleteById(id);
     }
 
     @Override
     public void actualizar(Odontologo odontologo) {
-        iDao.actualizar(odontologo);
+        odontologoRepository.save(odontologo);
     }
 }

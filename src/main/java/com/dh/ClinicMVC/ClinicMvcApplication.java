@@ -1,6 +1,5 @@
 package com.dh.ClinicMVC;
 
-import com.dh.ClinicMVC.dao.BD;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

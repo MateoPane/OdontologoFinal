@@ -629,3 +629,8 @@
 [2024-03-13 20:51:48] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
 [2024-03-13 20:52:08] [ INFO ] [OdontologoDaoH2:25] Estamos guardando un odontologo
 [2024-03-13 20:52:12] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
+[2024-03-15 19:48:39] [ INFO ] [BD:60] se creo la tabla odontologos
+[2024-03-15 19:48:39] [ INFO ] [BD:62] se insertó un valor en la tabla odontologos
+[2024-03-15 19:49:23] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
+[2024-03-15 19:49:34] [ INFO ] [OdontologoDaoH2:25] Estamos guardando un odontologo
+[2024-03-15 19:49:36] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.

@@ -1,14 +1,11 @@
 package com.dh.ClinicMVC.dao.implementacion;
 
-import com.dh.ClinicMVC.dao.BD;
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.model.Domicilio;
-import com.dh.ClinicMVC.model.Paciente;
+import com.dh.ClinicMVC.entity.Domicilio;
+import com.dh.ClinicMVC.entity.Paciente;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

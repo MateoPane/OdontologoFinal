@@ -1,7 +1,6 @@
 package com.dh.ClinicMVC.dao.implementacion;
 
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.model.Turno;
+import com.dh.ClinicMVC.entity.Turno;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

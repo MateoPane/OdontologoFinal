@@ -1,5 +1,5 @@
 package com.dh.ClinicMVC.controller;
-import com.dh.ClinicMVC.model.Paciente;
+import com.dh.ClinicMVC.entity.Paciente;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.implementation.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;

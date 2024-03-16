@@ -1,6 +1,12 @@
-package com.dh.ClinicMVC.model;
+package com.dh.ClinicMVC.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "odontologos")
 public class Odontologo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private String apellido;

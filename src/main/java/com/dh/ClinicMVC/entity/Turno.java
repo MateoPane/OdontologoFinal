@@ -1,8 +1,14 @@
-package com.dh.ClinicMVC.model;
+package com.dh.ClinicMVC.entity;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "turnos")
 public class Turno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDate fecha;
     private Odontologo odontologo;

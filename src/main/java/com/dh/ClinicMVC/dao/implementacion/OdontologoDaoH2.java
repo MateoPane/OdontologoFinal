@@ -1,8 +1,6 @@
 package com.dh.ClinicMVC.dao.implementacion;
 
-import com.dh.ClinicMVC.dao.BD;
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.model.Odontologo;
+import com.dh.ClinicMVC.entity.Odontologo;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 

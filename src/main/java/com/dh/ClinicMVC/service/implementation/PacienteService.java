@@ -1,45 +1,50 @@
 package com.dh.ClinicMVC.service.implementation;
 
-import com.dh.ClinicMVC.dao.IDao;
-import com.dh.ClinicMVC.dao.implementacion.PacienteDaoH2;
-import com.dh.ClinicMVC.model.Paciente;
+import com.dh.ClinicMVC.entity.Paciente;
+import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.service.IPacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PacienteService implements IPacienteService {
-    private IDao<Paciente> iDao;
+    private IPacienteRepository pacienteRepository;
 
     @Autowired
-    public PacienteService(PacienteDaoH2 pacienteDaoH2) {
-        this.iDao = pacienteDaoH2;
+    public PacienteService(IPacienteRepository pacienteRepository ) {
+        this.pacienteRepository = pacienteRepository;
     }
 
     @Override
     public Paciente guardar(Paciente paciente) {
-        return iDao.guardar(paciente);
+        return pacienteRepository.save(paciente);
     }
 
     @Override
     public List<Paciente> listarTodos() {
-        return iDao.listarTodos();
+        return pacienteRepository.findAll();
     }
 
     @Override
-    public Paciente buscarPorId(Integer id) {
-        return iDao.buscarPorId(id);
+    public Optional<Paciente> buscarPorId(Integer id) {
+        Optional<Paciente> pacienteOptional = pacienteRepository.findById(id);
+        if (pacienteOptional.isPresent()){
+            return pacienteOptional;
+        }else {
+            return null;
+        }
     }
 
     @Override
     public void eliminar(Integer id) {
-        iDao.eliminar(id);
+        pacienteRepository.deleteById(id);
     }
 
     @Override
     public void actualizar(Paciente paciente) {
-        iDao.actualizar(paciente);
+        pacienteRepository.save(paciente);
     }
 }
