@@ -1,5 +1,6 @@
 package com.dh.ClinicMVC.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +29,7 @@ public class Paciente {
     private Domicilio domicilio;
 
     @OneToMany(mappedBy = "paciente")
+    @JsonIgnore
     private Set<Turno> turnoSet = new HashSet<>();
 
 }
