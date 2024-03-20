@@ -1,17 +1,15 @@
 package com.dh.ClinicMVC.service;
 
-import com.dh.ClinicMVC.entity.Odontologo;
-
-import java.util.List;
-import java.util.Optional;
+import com.dh.ClinicMVC.entity.OdontologoDTO;
+import java.util.Set;
 
 public interface IOdontologoService {
-    Odontologo guardar (Odontologo odontologo);
+    void guardar (OdontologoDTO odontologoDTO);
 
-    List<Odontologo> listarTodos();
+    Set<OdontologoDTO> listarTodos();
 
-    Optional<Odontologo> buscarPorId(Long id);
+    OdontologoDTO buscarPorId(Long id);
     void eliminar(Long id);
-    void actualizar(Odontologo odontologo);
+    void actualizar(OdontologoDTO odontologoDTO);
 
 }

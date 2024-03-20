@@ -1,59 +1,38 @@
 package com.dh.ClinicMVC.controller;
 
-import com.dh.ClinicMVC.entity.Odontologo;
-import com.dh.ClinicMVC.repository.IOdontologoRepository;
+import com.dh.ClinicMVC.entity.OdontologoDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
-import com.dh.ClinicMVC.service.implementation.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    IOdontologoService odontologoService;
-    private IOdontologoRepository odontologoRepository;
-
     @Autowired
-    public OdontologoController(OdontologoService odontologoService) {
-        this.odontologoService = odontologoService;
-    }
-
+    IOdontologoService odontologoService;
     @PostMapping("/guardar")
-    public Odontologo guardar(@RequestBody Odontologo odontologo) {
-        return odontologoService.guardar(odontologo);
+    public void guardar(@RequestBody OdontologoDTO odontologoDTO) {
+        odontologoService.guardar(odontologoDTO);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscarPorId(@PathVariable Long id) {
-        Optional<Odontologo> odontologoOptional = odontologoService.buscarPorId(id);
-        if (odontologoOptional.isPresent()) {
-            Odontologo odontologo = odontologoOptional.get();
-            return ResponseEntity.ok(odontologo);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public OdontologoDTO buscarPorId(@PathVariable Long id) {
+        return odontologoService.buscarPorId(id);
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         odontologoService.eliminar(id);
     }
     @GetMapping("/listar")
-    public List<Odontologo> listarTodos(){
+    public Set<OdontologoDTO> listarTodos(){
         return odontologoService.listarTodos();
     }
     @PutMapping("/{id}")
-    public ResponseEntity<String> actualizar(@PathVariable Long id, @RequestBody Odontologo odontologo) {
-        ResponseEntity<String> response;
-        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(id);
-        if (odontologoBuscado.isPresent()){
-            odontologoService.actualizar(odontologo);
-            response = ResponseEntity.ok("Se actualizo el odontologo con id " + odontologo.getId());
-        }else {
-           response = ResponseEntity.ok("No se puede actualizar el odontologo");
-        }
-        return response;
+    public ResponseEntity<?> actualizar(@RequestBody OdontologoDTO odontologoDTO) {
+        odontologoService.actualizar(odontologoDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }

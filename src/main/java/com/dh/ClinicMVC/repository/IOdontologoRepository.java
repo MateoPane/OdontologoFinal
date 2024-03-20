@@ -1,6 +1,7 @@
 package com.dh.ClinicMVC.repository;
 
 import com.dh.ClinicMVC.entity.Odontologo;
+import com.dh.ClinicMVC.entity.OdontologoDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

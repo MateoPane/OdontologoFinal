@@ -20,8 +20,10 @@ public class Turno {
     private Long id;
     private LocalDate fecha;
     @ManyToOne
+    @JoinColumn(name = "odontologo_id", nullable = false)
     private Odontologo odontologo;
     @ManyToOne
+    @JoinColumn(name = "paciente_id", nullable = false)
     private Paciente paciente;
 
 
