@@ -1,14 +1,17 @@
 package com.dh.ClinicMVC.service;
-import com.dh.ClinicMVC.entity.Paciente;
+import com.dh.ClinicMVC.entity.PacienteDTO;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 public interface IPacienteService {
-    Paciente guardar(Paciente paciente);
-    List<Paciente> listarTodos();
+    void guardar(PacienteDTO pacienteDTO);
 
-    Optional<Paciente> buscarPorId(Long id);
+    Set<PacienteDTO> listarTodos();
+
+    PacienteDTO buscarPorId(Long id);
+
     void eliminar(Long id);
-    void actualizar(Paciente paciente);
+
+    void actualizar(PacienteDTO pacienteDTO);
+
 }

@@ -1,51 +1,48 @@
 package com.dh.ClinicMVC.controller;
-import com.dh.ClinicMVC.entity.Paciente;
+import com.dh.ClinicMVC.entity.PacienteDTO;
 import com.dh.ClinicMVC.service.IPacienteService;
-import com.dh.ClinicMVC.service.implementation.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
+    @Autowired
     private IPacienteService pacienteService;
 
-    @Autowired
-    public PacienteController(PacienteService pacienteService) {
-        this.pacienteService = pacienteService;
-    }
 
-    @PostMapping
-    public Paciente guardar(@RequestBody Paciente paciente) {
-        return pacienteService.guardar(paciente);
+    @PostMapping("/guardar")
+    public void guardar(@RequestBody PacienteDTO pacienteDTO) {
+         pacienteService.guardar(pacienteDTO);
     }
     @GetMapping("/{id}")
-    public Optional<Paciente> buscarPorId(@PathVariable Long id) {
-        Optional<Paciente> paciente = pacienteService.buscarPorId(id);
-        return paciente;
+    public PacienteDTO buscarPorId(@PathVariable Long id) {
+        PacienteDTO pacienteDTO = pacienteService.buscarPorId(id);
+        return pacienteDTO;
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         pacienteService.eliminar(id);
     }
     @GetMapping("/listar")
-    public List<Paciente> listarTodos(){
+    public Set<PacienteDTO> listarTodos(){
         return pacienteService.listarTodos();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> actualizar(@PathVariable Long id, @RequestBody Paciente paciente) {
+    public ResponseEntity<String> actualizar(@PathVariable Long id, @RequestBody PacienteDTO pacienteDTO) {
         ResponseEntity<String> response;
-        Optional<Paciente> pacienteOptional = pacienteService.buscarPorId(id);
-        if (pacienteOptional.isPresent()){
-            pacienteService.actualizar(paciente);
-            response = ResponseEntity.ok("Se actualizo el paciente con id " + paciente.getId());
+        PacienteDTO pacienteOptional = pacienteService.buscarPorId(id);
+        if (pacienteOptional != null){
+            pacienteService.actualizar(pacienteDTO);
+            response = ResponseEntity.ok("Se actualizo el paciente con id " + pacienteDTO.getId());
         }else
             response = ResponseEntity.ok("No se puede actualizar el paciente");
         return response;
     }
 }
+
