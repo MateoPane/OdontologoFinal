@@ -1,7 +1,7 @@
 package com.dh.ClinicMVC.service.implementation;
 
 import com.dh.ClinicMVC.entity.Turno;
-import com.dh.ClinicMVC.entity.TurnoDTO;
+import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
 import com.dh.ClinicMVC.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;

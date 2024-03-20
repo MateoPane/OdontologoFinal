@@ -1,6 +1,6 @@
 package com.dh.ClinicMVC.service;
 
-import com.dh.ClinicMVC.entity.OdontologoDTO;
+import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import java.util.Set;
 
 public interface IOdontologoService {

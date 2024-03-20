@@ -1,6 +1,6 @@
 package com.dh.ClinicMVC.controller;
 
-import com.dh.ClinicMVC.entity.OdontologoDTO;
+import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,5 +1,7 @@
-package com.dh.ClinicMVC.entity;
+package com.dh.ClinicMVC.entity.DTO;
 
+import com.dh.ClinicMVC.entity.Odontologo;
+import com.dh.ClinicMVC.entity.Paciente;
 import lombok.Getter;
 import lombok.Setter;
 

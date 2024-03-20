@@ -1,6 +1,6 @@
 package com.dh.ClinicMVC.service;
 
-import com.dh.ClinicMVC.entity.TurnoDTO;
+import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import java.util.Set;
 
 public interface ITurnoService {

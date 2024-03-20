@@ -1,11 +1,10 @@
 package com.dh.ClinicMVC.controller;
-import com.dh.ClinicMVC.entity.PacienteDTO;
+import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
 import com.dh.ClinicMVC.service.IPacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 import java.util.Set;
 
 @RestController

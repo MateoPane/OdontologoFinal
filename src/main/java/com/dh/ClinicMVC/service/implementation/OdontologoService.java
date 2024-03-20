@@ -1,7 +1,7 @@
 package com.dh.ClinicMVC.service.implementation;
 
 import com.dh.ClinicMVC.entity.Odontologo;
-import com.dh.ClinicMVC.entity.OdontologoDTO;
+import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.fasterxml.jackson.databind.ObjectMapper;

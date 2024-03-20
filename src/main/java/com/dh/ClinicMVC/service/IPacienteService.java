@@ -1,5 +1,5 @@
 package com.dh.ClinicMVC.service;
-import com.dh.ClinicMVC.entity.PacienteDTO;
+import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
 
 import java.util.Set;
 

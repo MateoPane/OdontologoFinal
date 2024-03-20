@@ -1,4 +1,4 @@
-package com.dh.ClinicMVC.entity;
+package com.dh.ClinicMVC.entity.DTO;
 
 import lombok.Getter;
 import lombok.Setter;

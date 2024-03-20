@@ -1,5 +1,5 @@
 package com.dh.ClinicMVC.controller;
-import com.dh.ClinicMVC.entity.TurnoDTO;
+import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;

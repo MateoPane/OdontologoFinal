@@ -1,7 +1,7 @@
 package com.dh.ClinicMVC.service.implementation;
 
 import com.dh.ClinicMVC.entity.Paciente;
-import com.dh.ClinicMVC.entity.PacienteDTO;
+import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
 import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
