@@ -15,12 +15,8 @@ import java.util.Set;
 
 @Service
 public class PacienteService implements IPacienteService {
-    private IPacienteRepository pacienteRepository;
-
     @Autowired
-    public PacienteService(IPacienteRepository pacienteRepository ) {
-        this.pacienteRepository = pacienteRepository;
-    }
+    private IPacienteRepository pacienteRepository;
 
     @Autowired
     ObjectMapper mapper;

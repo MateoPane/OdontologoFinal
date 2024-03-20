@@ -25,10 +25,15 @@ public class TurnoController {
 
     @PostMapping("/guardar")
 
-    public void guardar(@RequestBody TurnoDTO turnoDTO) {
+    public ResponseEntity<TurnoDTO> guardar(@RequestBody TurnoDTO turnoDTO) {
+        ResponseEntity<TurnoDTO> response;
         if (odontologoService.buscarPorId(turnoDTO.getOdontologo().getId()) != null &&
                 pacienteService.buscarPorId(turnoDTO.getPaciente().getId()) != null) {
+            response = ResponseEntity.ok(turnoService.guardar(turnoDTO));
+        }else {
+            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
+        return response;
     }
     @GetMapping("/{id}")
     public TurnoDTO buscarPorId(@PathVariable Long id) {

@@ -24,9 +24,10 @@ public class TurnoService implements ITurnoService {
 
 
     @Override
-    public void guardar(TurnoDTO turnoDTO) {
+    public TurnoDTO guardar(TurnoDTO turnoDTO) {
         Turno turno = mapper.convertValue(turnoDTO, Turno.class);
         turnoRepository.save(turno);
+        return turnoDTO;
     }
 
     @Override

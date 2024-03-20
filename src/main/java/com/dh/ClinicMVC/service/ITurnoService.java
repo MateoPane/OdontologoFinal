@@ -4,7 +4,7 @@ import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import java.util.Set;
 
 public interface ITurnoService {
-    void guardar(TurnoDTO turnoDTO);
+    TurnoDTO guardar(TurnoDTO turnoDTO);
 
     Set<TurnoDTO> listarTodos();
 
