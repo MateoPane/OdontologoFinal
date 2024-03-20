@@ -42,7 +42,6 @@ public class OdontologoService implements IOdontologoService {
 
     @Override
     public void eliminar(Long id) {
-        //dudas
         odontologoRepository.deleteById(id);
     }
 

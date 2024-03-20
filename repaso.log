@@ -634,3 +634,12 @@
 [2024-03-15 19:49:23] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
 [2024-03-15 19:49:34] [ INFO ] [OdontologoDaoH2:25] Estamos guardando un odontologo
 [2024-03-15 19:49:36] [ INFO ] [OdontologoDaoH2:141] Estamos consultando todos los Odontologos.
+[2024-03-19 20:43:17] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@1571d4ac
+[2024-03-19 20:51:16] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@10c710eb
+[2024-03-19 20:51:30] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@3e8d695d
+[2024-03-19 20:53:16] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@e5943ac
+[2024-03-19 20:54:02] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@e5c82c
+[2024-03-19 20:54:04] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@14f784f8
+[2024-03-19 21:13:52] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@3b0613b1
+[2024-03-19 21:14:00] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@700facf7
+[2024-03-19 21:14:17] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@17ead71d

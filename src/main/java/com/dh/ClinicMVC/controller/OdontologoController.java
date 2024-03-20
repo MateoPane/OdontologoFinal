@@ -1,6 +1,7 @@
 package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.entity.Odontologo;
+import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.implementation.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    private IOdontologoService odontologoService;
+    IOdontologoService odontologoService;
+    private IOdontologoRepository odontologoRepository;
 
     @Autowired
     public OdontologoController(OdontologoService odontologoService) {
@@ -42,15 +44,15 @@ public class OdontologoController {
     public List<Odontologo> listarTodos(){
         return odontologoService.listarTodos();
     }
-    @PutMapping
-    public ResponseEntity<String> actualizar(@RequestBody Odontologo odontologo) {
+    @PutMapping("/{id}")
+    public ResponseEntity<String> actualizar(@PathVariable Long id, @RequestBody Odontologo odontologo) {
         ResponseEntity<String> response;
-        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
-        if (odontologoBuscado != null){
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(id);
+        if (odontologoBuscado.isPresent()){
             odontologoService.actualizar(odontologo);
             response = ResponseEntity.ok("Se actualizo el odontologo con id " + odontologo.getId());
         }else {
-           response = ResponseEntity.ok().body("No se puede actualizar el odontologo");
+           response = ResponseEntity.ok("No se puede actualizar el odontologo");
         }
         return response;
     }
