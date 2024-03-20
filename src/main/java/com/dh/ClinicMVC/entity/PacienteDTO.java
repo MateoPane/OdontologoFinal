@@ -2,10 +2,9 @@ package com.dh.ClinicMVC.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-
+@Setter
+@Getter
 public class PacienteDTO {
-    @Setter
-    @Getter
 
     private Long id;
     private String nombre;

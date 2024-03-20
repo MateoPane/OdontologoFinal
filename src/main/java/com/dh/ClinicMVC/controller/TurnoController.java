@@ -1,78 +1,51 @@
 package com.dh.ClinicMVC.controller;
-import com.dh.ClinicMVC.entity.Turno;
+import com.dh.ClinicMVC.entity.TurnoDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;
-import com.dh.ClinicMVC.service.implementation.OdontologoService;
-import com.dh.ClinicMVC.service.implementation.PacienteService;
-import com.dh.ClinicMVC.service.implementation.TurnoService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
     private static final Logger LOGGER = Logger.getLogger(TurnoController.class);
+    @Autowired
     private ITurnoService turnoService;
+    @Autowired
     private IOdontologoService odontologoService;
+    @Autowired
     private IPacienteService pacienteService;
 
-    @Autowired
-    public TurnoController(TurnoService turnoService, OdontologoService odontologoService, PacienteService pacienteService) {
-        this.turnoService = turnoService;
-        this.odontologoService = odontologoService;
-        this.pacienteService = pacienteService;
-    }
+    @PostMapping("/guardar")
 
-    @PostMapping
-    public ResponseEntity<Turno> guardar(@RequestBody Turno turno) {
-        ResponseEntity<Turno> response;
-
-        LOGGER.info("Estamos guardando un turno" + turno);
-        if (odontologoService.buscarPorId(turno.getOdontologo().getId()) != null &&
-                pacienteService.buscarPorId(turno.getPaciente().getId()) != null) {
-
-            response = ResponseEntity.ok(turnoService.guardar(turno));
-        } else {
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    public void guardar(@RequestBody TurnoDTO turnoDTO) {
+        if (odontologoService.buscarPorId(turnoDTO.getOdontologo().getId()) != null &&
+                pacienteService.buscarPorId(turnoDTO.getPaciente().getId()) != null) {
         }
-        return response;
+    }
+    @GetMapping("/{id}")
+    public TurnoDTO buscarPorId(@PathVariable Long id) {
+        return turnoService.buscarPorId(id);
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id){
         turnoService.eliminar(id);
     }
-    @GetMapping
-    public ResponseEntity<List<Turno>> listarTodos(){
-        List<Turno> turnos = turnoService.listarTodos();
-        return ResponseEntity.ok(turnos);
-    }
-    @GetMapping("/{id}")
-    public ResponseEntity<Turno> buscarPorId(@PathVariable Long id) {
-        Optional<Turno> turno = turnoService.buscarPorId(id);
-        if (turno != null) {
-            Turno turno1 = turno.get();
-            return ResponseEntity.ok(turno1);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @GetMapping("/listar")
+    public Set<TurnoDTO> listarTodos() {
+        return turnoService.listarTodos();
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Turno> actualizar(@PathVariable Long id, @RequestBody Turno turnoNuevo) {
-        Optional<Turno> turnoDado = turnoService.buscarPorId(id);
-        if (turnoDado != null) {
-            turnoService.actualizar(turnoNuevo);
-            return ResponseEntity.ok(turnoNuevo);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<?> actualizar(@RequestBody TurnoDTO turnoDTO) {
+        turnoService.actualizar(turnoDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }
 

@@ -1,19 +1,17 @@
 package com.dh.ClinicMVC.service;
 
-import com.dh.ClinicMVC.entity.Turno;
-
-import java.util.List;
-import java.util.Optional;
+import com.dh.ClinicMVC.entity.TurnoDTO;
+import java.util.Set;
 
 public interface ITurnoService {
-    Turno guardar(Turno turno);
+    void guardar(TurnoDTO turnoDTO);
 
-    List<Turno> listarTodos();
+    Set<TurnoDTO> listarTodos();
 
-    Optional<Turno> buscarPorId(Long id);
+    TurnoDTO buscarPorId(Long id);
 
     void eliminar(Long id);
 
-    void actualizar(Turno turno);
+    void actualizar(TurnoDTO turnoDTO);
 }
 

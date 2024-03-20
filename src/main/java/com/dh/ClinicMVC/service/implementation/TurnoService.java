@@ -1,41 +1,53 @@
 package com.dh.ClinicMVC.service.implementation;
 
 import com.dh.ClinicMVC.entity.Turno;
+import com.dh.ClinicMVC.entity.TurnoDTO;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
 import com.dh.ClinicMVC.service.ITurnoService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class TurnoService implements ITurnoService {
 
+    @Autowired
     private ITurnoRepository turnoRepository;
-@Autowired
-    public TurnoService(ITurnoRepository turnoRepository) {
-        this.turnoRepository = turnoRepository;
+
+    @Autowired
+    ObjectMapper mapper;
+
+
+    @Override
+    public void guardar(TurnoDTO turnoDTO) {
+        Turno turno = mapper.convertValue(turnoDTO, Turno.class);
+        turnoRepository.save(turno);
     }
 
     @Override
-    public Turno guardar(Turno turno) {
-        return turnoRepository.save(turno);
-    }
+    public Set<TurnoDTO> listarTodos() {
+        List<Turno> turnos = turnoRepository.findAll();
+        Set<TurnoDTO> turnoDTO = new HashSet<>();
 
-    @Override
-    public List<Turno> listarTodos() {
-        return turnoRepository.findAll();
-    }
-
-    @Override
-    public Optional<Turno> buscarPorId(Long id) {
-        Optional<Turno> turnoOptional = turnoRepository.findById(id);
-        if (turnoOptional.isPresent()) {
-            return turnoOptional;
-        }else {
-            return null;
+        for (Turno turno: turnos ) {
+            turnoDTO.add(mapper.convertValue(turno, TurnoDTO.class));
         }
+        return turnoDTO;
+    }
+
+    @Override
+    public TurnoDTO buscarPorId(Long id) {
+        Optional<Turno> turnoOptional = turnoRepository.findById(id);
+        TurnoDTO turnoDTO = null;
+        if (turnoOptional.isPresent()) {
+            turnoDTO = mapper.convertValue(turnoOptional, TurnoDTO.class);
+        }
+            return turnoDTO;
     }
 
     @Override
@@ -44,7 +56,8 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void actualizar(Turno turno) {
+    public void actualizar(TurnoDTO turnoDTO) {
+        Turno turno = mapper.convertValue(turnoDTO, Turno.class);
         turnoRepository.save(turno);
     }
 }
