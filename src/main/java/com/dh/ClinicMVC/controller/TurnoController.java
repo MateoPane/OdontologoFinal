@@ -1,5 +1,6 @@
 package com.dh.ClinicMVC.controller;
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
+import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;
@@ -24,7 +25,6 @@ public class TurnoController {
     private IPacienteService pacienteService;
 
     @PostMapping("/guardar")
-
     public ResponseEntity<TurnoDTO> guardar(@RequestBody TurnoDTO turnoDTO) {
         ResponseEntity<TurnoDTO> response;
         if (odontologoService.buscarPorId(turnoDTO.getOdontologo().getId()) != null &&
@@ -52,6 +52,19 @@ public class TurnoController {
         turnoService.actualizar(turnoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+    @PostMapping("/guardarPorId")
+    public ResponseEntity<TurnoDTO> guardarConId(@RequestBody TurnoRequestDTO turno) {
+        ResponseEntity<TurnoDTO> response;
+        if (odontologoService.buscarPorId(turno.getOdontologoId()) != null &&
+                pacienteService.buscarPorId(turno.getPacienteId()) != null) {
+            response = ResponseEntity.ok(turnoService.guardarPorId(turno));
+        }else {
+            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+        return response;
+    }
+
 }
 
 

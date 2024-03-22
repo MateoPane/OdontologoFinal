@@ -1,8 +1,14 @@
 package com.dh.ClinicMVC.service.implementation;
 
+import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
+import com.dh.ClinicMVC.entity.Odontologo;
+import com.dh.ClinicMVC.entity.Paciente;
 import com.dh.ClinicMVC.entity.Turno;
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
+import com.dh.ClinicMVC.repository.IOdontologoRepository;
+import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
+import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +24,10 @@ public class TurnoService implements ITurnoService {
 
     @Autowired
     private ITurnoRepository turnoRepository;
+    @Autowired
+    private IPacienteRepository pacienteRepository;
+    @Autowired
+    private IOdontologoRepository odontologoRepository;
 
     @Autowired
     ObjectMapper mapper;
@@ -60,5 +70,20 @@ public class TurnoService implements ITurnoService {
     public void actualizar(TurnoDTO turnoDTO) {
         Turno turno = mapper.convertValue(turnoDTO, Turno.class);
         turnoRepository.save(turno);
+    }
+
+    @Override
+    public TurnoDTO guardarPorId(TurnoRequestDTO turnoDTO) {
+        Odontologo odontologo = odontologoRepository.findById(turnoDTO.getOdontologoId())
+                .orElseThrow();
+        Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId()).orElseThrow();
+
+        Turno turno = new Turno();
+        turno.setOdontologo(odontologo);
+        turno.setPaciente(paciente);
+        turno.setFecha(turnoDTO.getFecha());
+        Turno turnoGuardado = turnoRepository.save(turno);
+
+        return mapper.convertValue(turnoGuardado, TurnoDTO.class);
     }
 }
