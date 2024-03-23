@@ -1,4 +1,5 @@
 package com.dh.ClinicMVC.controller;
+
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
@@ -25,44 +26,36 @@ public class TurnoController {
     private IPacienteService pacienteService;
 
     @PostMapping("/guardar")
-    public ResponseEntity<TurnoDTO> guardar(@RequestBody TurnoDTO turnoDTO) {
+    public ResponseEntity<TurnoDTO> guardar(@RequestBody TurnoRequestDTO turnoDTO) {
         ResponseEntity<TurnoDTO> response;
-        if (odontologoService.buscarPorId(turnoDTO.getOdontologo().getId()) != null &&
-                pacienteService.buscarPorId(turnoDTO.getPaciente().getId()) != null) {
+        if (odontologoService.buscarPorId(turnoDTO.getOdontologoId()) != null &&
+                pacienteService.buscarPorId(turnoDTO.getPacienteId()) != null) {
             response = ResponseEntity.ok(turnoService.guardar(turnoDTO));
-        }else {
+        } else {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
         return response;
     }
+
     @GetMapping("/{id}")
     public TurnoDTO buscarPorId(@PathVariable Long id) {
         return turnoService.buscarPorId(id);
     }
+
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Long id){
+    public void eliminar(@PathVariable Long id) {
         turnoService.eliminar(id);
     }
+
     @GetMapping("/listar")
     public Set<TurnoDTO> listarTodos() {
         return turnoService.listarTodos();
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@RequestBody TurnoDTO turnoDTO) {
         turnoService.actualizar(turnoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
-    }
-
-    @PostMapping("/guardarPorId")
-    public ResponseEntity<TurnoDTO> guardarConId(@RequestBody TurnoRequestDTO turno) {
-        ResponseEntity<TurnoDTO> response;
-        if (odontologoService.buscarPorId(turno.getOdontologoId()) != null &&
-                pacienteService.buscarPorId(turno.getPacienteId()) != null) {
-            response = ResponseEntity.ok(turnoService.guardarPorId(turno));
-        }else {
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        return response;
     }
 
 }

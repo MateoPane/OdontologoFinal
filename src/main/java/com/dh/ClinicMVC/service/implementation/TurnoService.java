@@ -22,6 +22,7 @@ import java.util.Set;
 @Service
 public class TurnoService implements ITurnoService {
 
+
     @Autowired
     private ITurnoRepository turnoRepository;
     @Autowired
@@ -32,12 +33,19 @@ public class TurnoService implements ITurnoService {
     @Autowired
     ObjectMapper mapper;
 
-
     @Override
-    public TurnoDTO guardar(TurnoDTO turnoDTO) {
-        Turno turno = mapper.convertValue(turnoDTO, Turno.class);
-        turnoRepository.save(turno);
-        return turnoDTO;
+    public TurnoDTO guardar(TurnoRequestDTO turnoDTO) {
+        Odontologo odontologo = odontologoRepository.findById(turnoDTO.getOdontologoId())
+                .orElseThrow();
+        Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId()).orElseThrow();
+
+        Turno turno = new Turno();
+        turno.setOdontologo(odontologo);
+        turno.setPaciente(paciente);
+        turno.setFecha(turnoDTO.getFecha());
+        Turno turnoGuardado = turnoRepository.save(turno);
+
+        return mapper.convertValue(turnoGuardado, TurnoDTO.class);
     }
 
     @Override
@@ -72,18 +80,4 @@ public class TurnoService implements ITurnoService {
         turnoRepository.save(turno);
     }
 
-    @Override
-    public TurnoDTO guardarPorId(TurnoRequestDTO turnoDTO) {
-        Odontologo odontologo = odontologoRepository.findById(turnoDTO.getOdontologoId())
-                .orElseThrow();
-        Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId()).orElseThrow();
-
-        Turno turno = new Turno();
-        turno.setOdontologo(odontologo);
-        turno.setPaciente(paciente);
-        turno.setFecha(turnoDTO.getFecha());
-        Turno turnoGuardado = turnoRepository.save(turno);
-
-        return mapper.convertValue(turnoGuardado, TurnoDTO.class);
-    }
 }
