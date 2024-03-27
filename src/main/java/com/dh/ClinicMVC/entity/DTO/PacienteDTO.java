@@ -13,5 +13,5 @@ public class PacienteDTO {
     private String nombre;
     private String apellido;
     private LocalDate fechaIngreso;
-    private DomicilioDTO domicilio;
+
 }

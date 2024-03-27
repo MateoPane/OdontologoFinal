@@ -21,8 +21,6 @@ import java.util.Set;
 
 @Service
 public class TurnoService implements ITurnoService {
-
-
     @Autowired
     private ITurnoRepository turnoRepository;
     @Autowired
