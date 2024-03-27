@@ -8,6 +8,7 @@ import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
+import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ import java.util.Set;
 
 @Service
 public class TurnoService implements ITurnoService {
+
+
     @Autowired
     private ITurnoRepository turnoRepository;
     @Autowired

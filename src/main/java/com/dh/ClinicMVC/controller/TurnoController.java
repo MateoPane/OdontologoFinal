@@ -17,7 +17,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
-//    private static final Logger LOGGER = Logger.getLogger(TurnoController.class);
+    private static final Logger LOGGER = Logger.getLogger(TurnoController.class);
     @Autowired
     private ITurnoService turnoService;
     @Autowired
@@ -33,34 +33,28 @@ public class TurnoController {
             response = ResponseEntity.ok(turnoService.guardar(turnoDTO));
         } else {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-//            LOGGER.info("Hubo inconvenientes a la hora de guardar el turno.");
         }
-//        LOGGER.info("Se guardo correctamente.");
         return response;
     }
 
     @GetMapping("/{id}")
     public TurnoDTO buscarPorId(@PathVariable Long id) {
-//        LOGGER.info("Se encontro el id: " + id);
         return turnoService.buscarPorId(id);
     }
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
-//        LOGGER.info("Se elimino correctamente.");
         turnoService.eliminar(id);
     }
 
     @GetMapping("/listar")
     public Set<TurnoDTO> listarTodos() {
-//        LOGGER.info("...Preguntar");
         return turnoService.listarTodos();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@RequestBody TurnoDTO turnoDTO) {
         turnoService.actualizar(turnoDTO);
-//        LOGGER.info("Se actualizo el turno: " + turnoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 

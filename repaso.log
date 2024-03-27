@@ -656,3 +656,6 @@
 [2024-03-26 21:28:00] [ INFO ] [OdontologoController:22] Se guardo correctamente.
 [2024-03-26 21:38:00] [ INFO ] [PacienteController:22] Se guardo correctamente.
 [2024-03-26 21:38:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:52:42] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:52:44] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:52:47] [ INFO ] [TurnoController:38] Se guardo correctamente.
