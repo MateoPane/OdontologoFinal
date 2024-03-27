@@ -1,7 +1,5 @@
 package com.dh.ClinicMVC.entity.DTO;
 
-import com.dh.ClinicMVC.entity.Odontologo;
-import com.dh.ClinicMVC.entity.Paciente;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;

@@ -643,3 +643,16 @@
 [2024-03-19 21:13:52] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@3b0613b1
 [2024-03-19 21:14:00] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@700facf7
 [2024-03-19 21:14:17] [ INFO ] [TurnoController:38] Estamos guardando un turnocom.dh.ClinicMVC.entity.Turno@17ead71d
+[2024-03-26 20:45:37] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:18:34] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:18:35] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:19:30] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:19:30] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:21:12] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:21:17] [ INFO ] [PacienteController:27] Se encontro el id: 1
+[2024-03-26 21:21:22] [ INFO ] [PacienteController:27] Se encontro el id: 2
+[2024-03-26 21:27:12] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:27:45] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:28:00] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-26 21:38:00] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-26 21:38:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.

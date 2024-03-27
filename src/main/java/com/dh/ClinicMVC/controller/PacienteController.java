@@ -1,6 +1,7 @@
 package com.dh.ClinicMVC.controller;
 import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
 import com.dh.ClinicMVC.service.IPacienteService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
+//    private static final Logger LOGGER = Logger.getLogger(PacienteController.class);
     @Autowired
     private IPacienteService pacienteService;
 
@@ -17,14 +19,17 @@ public class PacienteController {
     @PostMapping("/guardar")
     public void guardar(@RequestBody PacienteDTO pacienteDTO) {
          pacienteService.guardar(pacienteDTO);
+//         LOGGER.info("Se guardo correctamente.");
     }
     @GetMapping("/{id}")
     public PacienteDTO buscarPorId(@PathVariable Long id) {
         PacienteDTO pacienteDTO = pacienteService.buscarPorId(id);
+//        LOGGER.info("Se encontro el id: " + id);
         return pacienteDTO;
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
+//        LOGGER.info("Se elimino correctamente.");
         pacienteService.eliminar(id);
     }
     @GetMapping("/listar")
