@@ -1,16 +1,19 @@
 package com.dh.ClinicMVC.service.implementation;
 
+import com.dh.ClinicMVC.controller.PacienteController;
+import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
 import com.dh.ClinicMVC.entity.Odontologo;
 import com.dh.ClinicMVC.entity.Paciente;
 import com.dh.ClinicMVC.entity.Turno;
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
+import com.dh.ClinicMVC.exception.ResourceNotFoundException;
 import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
-import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +24,7 @@ import java.util.Set;
 
 @Service
 public class TurnoService implements ITurnoService {
+    private static final Logger LOGGER = Logger.getLogger(TurnoService.class);
 
 
     @Autowired
@@ -33,11 +37,13 @@ public class TurnoService implements ITurnoService {
     @Autowired
     ObjectMapper mapper;
 
-    @Override
     public TurnoDTO guardar(TurnoRequestDTO turnoDTO) {
         Odontologo odontologo = odontologoRepository.findById(turnoDTO.getOdontologoId())
-                .orElseThrow();
-        Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId()).orElseThrow();
+                .orElseThrow(() -> new ResourceNotFoundException("El odontologo no existe"));
+        System.out.println(odontologo);
+        Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId())
+                .orElseThrow(() -> new ResourceNotFoundException("El paciente no existe"));
+        System.out.println(paciente);
 
         Turno turno = new Turno();
         turno.setOdontologo(odontologo);
@@ -51,8 +57,12 @@ public class TurnoService implements ITurnoService {
     @Override
     public Set<TurnoDTO> listarTodos() {
         List<Turno> turnos = turnoRepository.findAll();
-        Set<TurnoDTO> turnoDTO = new HashSet<>();
+        if (turnos.isEmpty()) {
+            LOGGER.info("No se encontraron turnos para listar.");
+            throw new ResourceNotFoundException("No se encontraron turnos para listar.");
+        }
 
+        Set<TurnoDTO> turnoDTO = new HashSet<>();
         for (Turno turno: turnos ) {
             turnoDTO.add(mapper.convertValue(turno, TurnoDTO.class));
         }
@@ -65,19 +75,44 @@ public class TurnoService implements ITurnoService {
         TurnoDTO turnoDTO = null;
         if (turnoOptional.isPresent()) {
             turnoDTO = mapper.convertValue(turnoOptional, TurnoDTO.class);
+        }else {
+            LOGGER.info("No se encontro el turno con id " + id);
+            throw new ResourceNotFoundException("No se encontro el turno con el id " + id);
         }
             return turnoDTO;
     }
 
     @Override
     public void eliminar(Long id) {
-        turnoRepository.deleteById(id);
+        Optional<Turno> optionalTurno = turnoRepository.findById(id);
+        if (optionalTurno.isPresent()) {
+            LOGGER.info("Se elimino correctamente.");
+            turnoRepository.deleteById(id);
+        } else {
+            LOGGER.info("No se encontro el turno con id: " + id + " para eliminar");
+            throw new ResourceNotFoundException("No se encontro el turno con el id: " + id + " para eliminar");
+        }
     }
 
+//    @Override
+//    public void actualizar(TurnoDTO turnoDTO) {
+//        Long turnoId = turnoDTO.getId();
+//        Optional<Turno> turnoOptional = turnoRepository.findById(turnoId);
+//        if (turnoOptional.isPresent()) {
+//            Turno turno = mapper.convertValue(turnoDTO, Turno.class);
+//            turnoRepository.save(turno);
+//        } else {
+//            LOGGER.info("No se encontró el turno con ID: " + turnoId + " para actualizar.");
+//            throw new ResourceNotFoundException("No se encontró el turno con el ID: " + turnoId + " para actualizar.");
+//        }
+//    }
     @Override
     public void actualizar(TurnoDTO turnoDTO) {
+        System.out.println(turnoDTO + "turnoDTO");
         Turno turno = mapper.convertValue(turnoDTO, Turno.class);
+        System.out.println(turno+ " turno");
         turnoRepository.save(turno);
+
     }
 
 }

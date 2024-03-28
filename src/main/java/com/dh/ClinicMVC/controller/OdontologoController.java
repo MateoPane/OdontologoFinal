@@ -1,6 +1,7 @@
 package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
+import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,28 +18,46 @@ public class OdontologoController {
     @Autowired
     IOdontologoService odontologoService;
     @PostMapping("/guardar")
-    public void guardar(@RequestBody OdontologoDTO odontologoDTO) {
-        odontologoService.guardar(odontologoDTO);
+    public ResponseEntity<?> guardar(@RequestBody OdontologoDTO odontologoDTO) {
         LOGGER.info("Se guardo correctamente.");
+        odontologoService.guardar(odontologoDTO);
+        String guardadoExitoso = "Se guardo correctamente el odontologo.";
+        return ResponseEntity.ok().body(guardadoExitoso);
+
     }
     @GetMapping("/{id}")
-    public OdontologoDTO buscarPorId(@PathVariable Long id) {
-        LOGGER.info("Se encontro el id: " + id);
-        return odontologoService.buscarPorId(id);
+    public ResponseEntity<?> buscarPorId(@PathVariable Long id) {
+        LOGGER.info("Buscando odontólogo con ID: " + id);
+        OdontologoDTO odontologoDTO = odontologoService.buscarPorId(id);
+        if (odontologoDTO != null) {
+            return ResponseEntity.ok(odontologoDTO);
+        } else {
+            String mensajeError = "No se encontró el odontólogo con ID: " + id;
+            LOGGER.error(mensajeError);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeError);
+        }
     }
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Long id) {
+    public ResponseEntity<?> eliminar(@PathVariable Long id) {
         LOGGER.info("Se elimino correctamente.");
         odontologoService.eliminar(id);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
     @GetMapping("/listar")
-    public Set<OdontologoDTO> listarTodos(){
-        return odontologoService.listarTodos();
+    public ResponseEntity<Set<OdontologoDTO>> listarTodos(){
+        return ResponseEntity.ok(odontologoService.listarTodos());
     }
-    @PutMapping("/{id}")
-    public ResponseEntity<?> actualizar(@RequestBody OdontologoDTO odontologoDTO) {
-        odontologoService.actualizar(odontologoDTO);
-        LOGGER.info("Se actualizo el turno: " + odontologoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+    @PutMapping
+    public ResponseEntity<String> actualizar(@RequestBody OdontologoDTO odontologoDTO) {
+        ResponseEntity<String> response;
+        OdontologoDTO odontologoBuscado = odontologoService.buscarPorId(odontologoDTO.getId());
+        if (odontologoBuscado != null) {
+            odontologoService.actualizar(odontologoDTO);
+            response = ResponseEntity.ok("Se actualizó el odontologo con id " + odontologoDTO.getId());
+        } else {
+            response = ResponseEntity.ok("No se puede actualizar el odontologo");
+        }
+        return response;
+
     }
 }

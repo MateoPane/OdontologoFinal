@@ -1,5 +1,6 @@
 package com.dh.ClinicMVC.controller;
 import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
+import com.dh.ClinicMVC.exception.ResourceNotFoundException;
 import com.dh.ClinicMVC.service.IPacienteService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +18,17 @@ public class PacienteController {
 
 
     @PostMapping("/guardar")
-    public void guardar(@RequestBody PacienteDTO pacienteDTO) {
+    public ResponseEntity<?> guardar(@RequestBody PacienteDTO pacienteDTO) {
+        LOGGER.info("Se guardo correctamente.");
          pacienteService.guardar(pacienteDTO);
-         LOGGER.info("Se guardo correctamente.");
+         String guardadoExitoso = "Se guardo correctamente el paciente.";
+         return ResponseEntity.ok().body(guardadoExitoso);
     }
     @GetMapping("/{id}")
-    public PacienteDTO buscarPorId(@PathVariable Long id) {
+    public ResponseEntity<PacienteDTO> buscarPorId(@PathVariable Long id)  {
         PacienteDTO pacienteDTO = pacienteService.buscarPorId(id);
         LOGGER.info("Se encontro el id: " + id);
-        return pacienteDTO;
+        return ResponseEntity.ok(pacienteDTO);
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
@@ -37,7 +40,7 @@ public class PacienteController {
         return pacienteService.listarTodos();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping
     public ResponseEntity<String> actualizar(@PathVariable Long id, @RequestBody PacienteDTO pacienteDTO) {
         ResponseEntity<String> response;
         PacienteDTO pacienteOptional = pacienteService.buscarPorId(id);

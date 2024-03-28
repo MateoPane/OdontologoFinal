@@ -2,6 +2,7 @@ package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
+import com.dh.ClinicMVC.exception.ResourceNotFoundException;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;
@@ -26,37 +27,50 @@ public class TurnoController {
     private IPacienteService pacienteService;
 
     @PostMapping("/guardar")
-    public ResponseEntity<TurnoDTO> guardar(@RequestBody TurnoRequestDTO turnoDTO) {
-        ResponseEntity<TurnoDTO> response;
-        if (odontologoService.buscarPorId(turnoDTO.getOdontologoId()) != null &&
-                pacienteService.buscarPorId(turnoDTO.getPacienteId()) != null) {
-            response = ResponseEntity.ok(turnoService.guardar(turnoDTO));
-        } else {
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    public ResponseEntity<?> guardar(@RequestBody TurnoRequestDTO turnoDTO) {
+        TurnoDTO turnoGuardado;
+        try {
+            turnoGuardado = turnoService.guardar(turnoDTO);
+            return ResponseEntity.ok(turnoGuardado);
+        } catch (Exception e) {
+            LOGGER.error("Error al guardar el turno: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
-        return response;
     }
-
     @GetMapping("/{id}")
-    public TurnoDTO buscarPorId(@PathVariable Long id) {
-        return turnoService.buscarPorId(id);
+    public ResponseEntity<TurnoDTO> buscarPorId(@PathVariable Long id) {
+        TurnoDTO turnoDTO = turnoService.buscarPorId(id);
+        return ResponseEntity.ok(turnoDTO);
     }
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         turnoService.eliminar(id);
+
     }
 
     @GetMapping("/listar")
-    public Set<TurnoDTO> listarTodos() {
-        return turnoService.listarTodos();
+    public ResponseEntity<Set<TurnoDTO>> listarTodos() {
+        return ResponseEntity.ok(turnoService.listarTodos());
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<?> actualizar(@RequestBody TurnoDTO turnoDTO) {
+    @PutMapping
+    public ResponseEntity<TurnoDTO> actualizar(@RequestBody TurnoDTO turnoDTO) {
         turnoService.actualizar(turnoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(turnoDTO);
     }
+//    @PutMapping
+//    public ResponseEntity<String> actualizar(@RequestBody TurnoDTO turnoDTO) {
+//        ResponseEntity<String> response;
+//        TurnoDTO turnoDTOBuscar = turnoService.buscarPorId(turnoDTO.getId());
+//        if (turnoDTOBuscar !=null) {
+//            turnoService.actualizar(turnoDTO);
+//            response = ResponseEntity.ok("Se actualizo el turno con id " + turnoDTO.getId());
+//        }else {
+//            response = ResponseEntity.ok("No se pudo actualizar el turno");
+//        }
+//        return response;
+//    }
 
 }
 

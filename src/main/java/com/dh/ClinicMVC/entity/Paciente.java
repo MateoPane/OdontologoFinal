@@ -32,4 +32,16 @@ public class Paciente {
     @JsonIgnore
     private Set<Turno> turnoSet = new HashSet<>();
 
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni='" + dni + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
+                ", domicilio=" + domicilio +
+                ", turnoSet=" + turnoSet +
+                '}';
+    }
 }

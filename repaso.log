@@ -659,3 +659,273 @@
 [2024-03-26 21:52:42] [ INFO ] [PacienteController:22] Se guardo correctamente.
 [2024-03-26 21:52:44] [ INFO ] [OdontologoController:22] Se guardo correctamente.
 [2024-03-26 21:52:47] [ INFO ] [TurnoController:38] Se guardo correctamente.
+[2024-03-26 23:07:01] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 08:33:56] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 08:33:58] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 08:34:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 08:34:04] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 08:34:07] [ ERROR] [GlobalExceptionHandler:15] The given id must not be null
+[2024-03-27 08:34:23] [ INFO ] [PacienteController:27] Se encontro el id: 1
+[2024-03-27 08:34:26] [ INFO ] [PacienteController:27] Se encontro el id: 2
+[2024-03-27 08:34:28] [ INFO ] [PacienteController:27] Se encontro el id: 3
+[2024-03-27 08:34:39] [ INFO ] [PacienteController:27] Se encontro el id: 4
+[2024-03-27 08:34:46] [ INFO ] [PacienteController:27] Se encontro el id: 9
+[2024-03-27 08:35:36] [ INFO ] [PacienteController:27] Se encontro el id: 9
+[2024-03-27 08:35:37] [ INFO ] [PacienteController:27] Se encontro el id: 9
+[2024-03-27 08:35:48] [ INFO ] [PacienteController:27] Se encontro el id: 9
+[2024-03-27 08:36:28] [ INFO ] [OdontologoController:26] Se encontro el id: 78
+[2024-03-27 08:36:36] [ INFO ] [OdontologoController:41] Se actualizo el turno: com.dh.ClinicMVC.entity.DTO.OdontologoDTO@3cc32d25
+[2024-03-27 08:36:45] [ INFO ] [OdontologoController:26] Se encontro el id: 78
+[2024-03-27 08:36:48] [ INFO ] [OdontologoController:41] Se actualizo el turno: com.dh.ClinicMVC.entity.DTO.OdontologoDTO@77cee2bb
+[2024-03-27 08:37:32] [ INFO ] [OdontologoController:41] Se actualizo el turno: com.dh.ClinicMVC.entity.DTO.OdontologoDTO@aec7811
+[2024-03-27 11:13:07] [ INFO ] [OdontologoController:44] Se actualizo el turno: com.dh.ClinicMVC.entity.DTO.OdontologoDTO@608fbb17
+[2024-03-27 11:13:26] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:13:41] [ INFO ] [OdontologoController:44] Se actualizo el turno: com.dh.ClinicMVC.entity.DTO.OdontologoDTO@24abc463
+[2024-03-27 11:13:45] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:13:51] [ INFO ] [OdontologoController:28] Se encontro el id: 2
+[2024-03-27 11:13:54] [ INFO ] [OdontologoController:28] Se encontro el id: 3
+[2024-03-27 11:13:58] [ INFO ] [OdontologoController:28] Se encontro el id: 4
+[2024-03-27 11:14:58] [ INFO ] [OdontologoController:28] Se encontro el id: 4
+[2024-03-27 11:15:01] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:15:07] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:15:12] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:15:16] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:15:35] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:15:42] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:15:46] [ INFO ] [OdontologoController:28] Se encontro el id: 1
+[2024-03-27 11:20:20] [ INFO ] [OdontologoController:28] Buscando odontólogo con ID: 1
+[2024-03-27 11:20:20] [ ERROR] [OdontologoController:34] No se encontró el odontólogo con ID: 1
+[2024-03-27 11:20:24] [ INFO ] [OdontologoController:28] Buscando odontólogo con ID: 1
+[2024-03-27 11:20:24] [ ERROR] [OdontologoController:34] No se encontró el odontólogo con ID: 1
+[2024-03-27 11:20:32] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:20:37] [ INFO ] [OdontologoController:28] Buscando odontólogo con ID: 1
+[2024-03-27 11:20:40] [ INFO ] [OdontologoController:28] Buscando odontólogo con ID: 2
+[2024-03-27 11:20:40] [ ERROR] [OdontologoController:34] No se encontró el odontólogo con ID: 2
+[2024-03-27 11:24:55] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:24:59] [ ERROR] [GlobalExceptionHandler:15] JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+[2024-03-27 11:25:05] [ ERROR] [GlobalExceptionHandler:15] JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+[2024-03-27 11:25:10] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:25:13] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:25:25] [ INFO ] [OdontologoController:33] Buscando odontólogo con ID: 1
+[2024-03-27 11:25:27] [ INFO ] [OdontologoController:33] Buscando odontólogo con ID: 2
+[2024-03-27 11:25:30] [ INFO ] [OdontologoController:33] Buscando odontólogo con ID: 3
+[2024-03-27 11:27:31] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:27:48] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 11:32:59] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 11:33:00] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 11:33:07] [ ERROR] [GlobalExceptionHandler:15] Request method 'PUT' is not supported
+[2024-03-27 11:33:32] [ ERROR] [GlobalExceptionHandler:15] The given id must not be null
+[2024-03-27 11:34:52] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 11:34:52] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 11:34:59] [ ERROR] [GlobalExceptionHandler:15] The given id must not be null
+[2024-03-27 11:35:52] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 11:35:53] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 11:36:22] [ INFO ] [PacienteController:27] Se encontro el id: 1
+[2024-03-27 13:56:36] [ ERROR] [GlobalExceptionHandler:15] No se encontro el turno con el id 1
+[2024-03-27 14:01:20] [ ERROR] [GlobalExceptionHandler:15] No se encontro el paciente con id 1
+[2024-03-27 14:04:45] [ ERROR] [GlobalExceptionHandler:15] No se encontro el paciente con id 1
+[2024-03-27 14:06:29] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:06:30] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:06:35] [ INFO ] [PacienteController:28] Se encontro el id: 2
+[2024-03-27 14:06:38] [ INFO ] [PacienteController:28] Se encontro el id: 1
+[2024-03-27 14:06:41] [ ERROR] [GlobalExceptionHandler:15] No se encontro el paciente con id 3
+[2024-03-27 14:14:10] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:14:16] [ INFO ] [PacienteController:28] Se encontro el id: 1
+[2024-03-27 14:23:02] [ INFO ] [PacienteController:85] No se encontro el turno con id: 2 para eliminar
+[2024-03-27 14:23:12] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:23:15] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:23:16] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:23:23] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:23:23] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:23:24] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:23:45] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@24514d68
+[2024-03-27 14:23:48] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@38231318
+[2024-03-27 14:23:57] [ INFO ] [PacienteController:85] No se encontro el turno con id: 2 para eliminar
+[2024-03-27 14:25:58] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:25:59] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:26:02] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:26:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:26:15] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@e6f43cc
+[2024-03-27 14:26:15] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2cb5095
+[2024-03-27 14:31:47] [ INFO ] [PacienteController:73] No se encontro el turno con id 220
+[2024-03-27 14:32:00] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:32:05] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:32:09] [ INFO ] [PacienteController:73] No se encontro el turno con id 1
+[2024-03-27 14:32:16] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@6c904da
+[2024-03-27 14:34:50] [ INFO ] [PacienteController:73] No se encontro el turno con id 3
+[2024-03-27 14:34:54] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:34:57] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:35:23] [ INFO ] [OdontologoController:30] Buscando odontólogo con ID: 1
+[2024-03-27 14:35:40] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4195afb5
+[2024-03-27 14:35:41] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@20cc1f15
+[2024-03-27 14:35:55] [ INFO ] [PacienteController:73] No se encontro el turno con id 14
+[2024-03-27 14:37:01] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:37:02] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:37:02] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:39:20] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:39:21] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:39:22] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 14:39:23] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:39:24] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:39:24] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 14:39:40] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@729bafc
+[2024-03-27 14:39:51] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@57749da8
+[2024-03-27 14:40:08] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@414da8d9
+[2024-03-27 14:40:14] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@7c36bf1a
+[2024-03-27 14:40:26] [ INFO ] [PacienteController:28] Se encontro el id: 2
+[2024-03-27 14:40:44] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4664b169
+[2024-03-27 15:02:08] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 15:02:09] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 15:02:09] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 15:02:14] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:02:21] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:02:48] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1551d597
+[2024-03-27 15:02:53] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@7cefa6a2
+[2024-03-27 15:02:53] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@15c4f251
+[2024-03-27 15:02:56] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2060d0e5
+[2024-03-27 15:03:01] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@3369d543
+[2024-03-27 15:03:04] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@18fe2a5b
+[2024-03-27 15:03:08] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@56a13007
+[2024-03-27 15:05:01] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 15:05:04] [ INFO ] [PacienteController:23] Se guardo correctamente.
+[2024-03-27 15:05:06] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:05:07] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:05:18] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@23534e7b
+[2024-03-27 15:05:27] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1112f4fd
+[2024-03-27 15:05:30] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@666709bc
+[2024-03-27 15:06:59] [ INFO ] [OdontologoController:30] Buscando odontólogo con ID: 1
+[2024-03-27 15:07:03] [ INFO ] [OdontologoController:30] Buscando odontólogo con ID: 12
+[2024-03-27 15:07:03] [ ERROR] [OdontologoController:36] No se encontró el odontólogo con ID: 12
+[2024-03-27 15:14:10] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 15:14:17] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-27 15:14:22] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:14:24] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:14:31] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@48d35e52
+[2024-03-27 15:14:34] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@fcb0ba7
+[2024-03-27 15:17:07] [ INFO ] [PacienteController:73] No se encontro el turno con id 1
+[2024-03-27 15:17:52] [ INFO ] [PacienteController:85] No se encontro el turno con id: 2 para eliminar
+[2024-03-27 15:18:39] [ INFO ] [PacienteController:86] No se encontro el turno con id: 2 para eliminar
+[2024-03-27 15:18:45] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@42dbd1ec
+[2024-03-27 15:18:49] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:19:04] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:19:07] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:19:14] [ INFO ] [PacienteController:36] Se elimino correctamente.
+[2024-03-27 15:19:24] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4195afb5
+[2024-03-27 15:19:33] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:19:35] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@6d45cd31
+[2024-03-27 15:19:41] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1788839b
+[2024-03-27 15:19:44] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:19:52] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@32a5365d
+[2024-03-27 15:19:56] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@50336742
+[2024-03-27 15:20:00] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@3652dc6e
+[2024-03-27 15:20:05] [ INFO ] [PacienteController:84] Se elimino el turno correctamente.
+[2024-03-27 15:20:28] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:20:31] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:20:36] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@5ee80294
+[2024-03-27 15:20:40] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@569529db
+[2024-03-27 15:20:44] [ INFO ] [PacienteController:83] Se elimino el turno correctamente.
+[2024-03-27 15:20:51] [ INFO ] [PacienteController:86] No se encontro el turno con id: 1 para eliminar
+[2024-03-27 15:21:21] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:21:23] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:21:28] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@77d9e057
+[2024-03-27 15:21:33] [ INFO ] [TurnoController:52] Se elimino el turno correctamente.
+[2024-03-27 15:22:00] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:22:01] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:22:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:22:03] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:22:09] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4031fe15
+[2024-03-27 15:22:09] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@7abff873
+[2024-03-27 15:22:14] [ INFO ] [TurnoController:51] Se elimino el turno correctamente.
+[2024-03-27 15:23:10] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:23:12] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:23:18] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1efa44c
+[2024-03-27 15:23:22] [ INFO ] [PacienteController:84] Se elimino el turno correctamente.
+[2024-03-27 15:27:31] [ INFO ] [PacienteController:59] No se encontraron turnos para listar.
+[2024-03-27 15:31:52] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2f9ddea7
+[2024-03-27 15:32:01] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:32:03] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@fcb0ba7
+[2024-03-27 15:32:47] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4e6c7a83
+[2024-03-27 15:34:00] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@67858839
+[2024-03-27 15:34:02] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2cb5095
+[2024-03-27 15:34:04] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:34:06] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@38231318
+[2024-03-27 15:35:25] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@d05c63
+[2024-03-27 15:35:32] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@4e1549c5
+[2024-03-27 15:35:34] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:35:35] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1551d597
+[2024-03-27 15:35:39] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:35:40] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2cb5095
+[2024-03-27 15:36:34] [ INFO ] [PacienteController:86] No se encontro el turno con id: 22 para eliminar
+[2024-03-27 15:36:55] [ INFO ] [PacienteController:74] No se encontro el turno con id 12
+[2024-03-27 15:37:16] [ INFO ] [PacienteController:56] No se encontraron turnos para listar.
+[2024-03-27 15:44:08] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:44:09] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 15:44:18] [ INFO ] [PacienteController:36] Se elimino correctamente.
+[2024-03-27 15:44:18] [ INFO ] [PacienteService:65] Se elimino correctamente.
+[2024-03-27 15:44:20] [ INFO ] [PacienteController:36] Se elimino correctamente.
+[2024-03-27 15:44:20] [ INFO ] [PacienteService:65] Se elimino correctamente.
+[2024-03-27 15:44:28] [ INFO ] [PacienteController:36] Se elimino correctamente.
+[2024-03-27 15:44:28] [ INFO ] [PacienteService:68] No se encontro el paciente con id: 2 para eliminar
+[2024-03-27 15:44:36] [ INFO ] [PacienteService:37] No se encontraron pacientes para listar.
+[2024-03-27 15:51:16] [ INFO ] [PacienteService:41] No se encontraron pacientes para listar.
+[2024-03-27 15:59:58] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 15:59:58] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:00:06] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:00:07] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:00:51] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@2cb5095
+[2024-03-27 16:00:58] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@22d9f46d
+[2024-03-27 16:03:29] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:03:31] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:03:32] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:03:34] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@1296a20d
+[2024-03-27 16:03:36] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@3aa3ab27
+[2024-03-27 16:03:36] [ INFO ] [TurnoService:41] Trae el odontologo
+[2024-03-27 16:03:36] [ INFO ] [TurnoService:43] Trae el paciente
+[2024-03-27 16:03:36] [ INFO ] [TurnoService:50] Llega?
+[2024-03-27 16:03:46] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@14f50954
+[2024-03-27 16:11:37] [ INFO ] [TurnoController:33] esto trae el turnoRequestDTO: com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO@5ebe2f29
+[2024-03-27 16:11:52] [ INFO ] [TurnoService:81] No se encontro el turno con id 1
+[2024-03-27 16:18:22] [ ERROR] [TurnoController:35] Error al guardar el turno: El odontologo no existe
+[2024-03-27 16:18:53] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:18:56] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:18:57] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:18:59] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:19:00] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:19:06] [ ERROR] [TurnoController:35] Error al guardar el turno: El paciente no existe
+[2024-03-27 16:19:12] [ INFO ] [TurnoService:50] Llega?
+[2024-03-27 16:24:59] [ ERROR] [TurnoController:36] Error al guardar el turno: El odontologo no existe
+[2024-03-27 16:25:08] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:25:10] [ ERROR] [TurnoController:36] Error al guardar el turno: El paciente no existe
+[2024-03-27 16:26:15] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:30:19] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:30:21] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:30:45] [ INFO ] [TurnoService:108] empieza
+[2024-03-27 16:30:45] [ INFO ] [TurnoService:110] edita
+[2024-03-27 16:31:54] [ INFO ] [PacienteController:31] Se encontro el id: 1
+[2024-03-27 16:32:06] [ INFO ] [OdontologoController:30] Buscando odontólogo con ID: 1
+[2024-03-27 16:32:55] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:33:17] [ ERROR] [TurnoController:36] Error al guardar el turno: El paciente no existe
+[2024-03-27 16:33:29] [ INFO ] [TurnoService:108] empieza
+[2024-03-27 16:33:29] [ INFO ] [TurnoService:110] edita
+[2024-03-27 16:33:36] [ INFO ] [TurnoService:108] empieza
+[2024-03-27 16:33:36] [ INFO ] [TurnoService:110] edita
+[2024-03-27 16:36:10] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:36:11] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:36:20] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:36:20] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:37:47] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:38:07] [ ERROR] [TurnoController:36] Error al guardar el turno: El paciente no existe
+[2024-03-27 16:40:06] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:40:08] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:43:28] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:43:30] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-27 16:44:49] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:45:35] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:45:35] [ INFO ] [PacienteService:29] com.dh.ClinicMVC.entity.DTO.PacienteDTO@5fd3bbbe
+[2024-03-27 16:46:21] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:46:21] [ INFO ] [PacienteService:29] PacienteDTO{id=null, nombre='Mateo', apellido='Pane', fechaIngreso=2022-01-09, dni='35433245', domicilio=com.dh.ClinicMVC.entity.Domicilio@3ce7ab29}
+[2024-03-27 16:47:07] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:47:07] [ INFO ] [PacienteService:29] PacienteDTO{id=1, nombre='Mateo', apellido='Pane', fechaIngreso=2022-01-09, dni='35433245', domicilio=com.dh.ClinicMVC.entity.Domicilio@6e314028}
+[2024-03-27 16:48:02] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:56:05] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-27 16:58:45] [ INFO ] [PacienteController:22] Se guardo correctamente.
