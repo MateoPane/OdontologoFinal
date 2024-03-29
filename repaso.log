@@ -929,3 +929,25 @@
 [2024-03-27 16:48:02] [ INFO ] [PacienteController:22] Se guardo correctamente.
 [2024-03-27 16:56:05] [ INFO ] [PacienteController:22] Se guardo correctamente.
 [2024-03-27 16:58:45] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:30:42] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-28 15:30:43] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-28 15:30:46] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:31:01] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:31:01] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:31:27] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:33:35] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:33:38] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:33:40] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-28 15:33:41] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-28 15:39:38] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:51:23] [ INFO ] [PacienteController:22] Se guardo correctamente.
+[2024-03-28 15:52:17] [ INFO ] [PacienteController:22] Guardando paciente...
+[2024-03-28 15:52:25] [ INFO ] [PacienteController:30] Se encontro el id: 1
+[2024-03-28 15:52:45] [ INFO ] [OdontologoController:22] Se guardo correctamente.
+[2024-03-28 15:53:15] [ ERROR] [TurnoController:36] Error al guardar el turno: El odontologo no existe
+[2024-03-28 15:53:19] [ ERROR] [TurnoController:36] Error al guardar el turno: El paciente no existe
+[2024-03-28 15:53:26] [ INFO ] [TurnoService:104] No se encontro el turno con id 3 para actualizar.
+[2024-03-28 15:53:26] [ ERROR] [TurnoController:64] Error al actualizar el turno: No se encontro el turno con id 3 para actualizar.
+[2024-03-28 15:53:45] [ INFO ] [TurnoService:89] Se elimino correctamente.
+[2024-03-28 15:53:47] [ INFO ] [TurnoService:92] No se encontro el turno con id: 2 para eliminar
+[2024-03-28 15:54:27] [ INFO ] [TurnoService:79] No se encontro el turno con id 2

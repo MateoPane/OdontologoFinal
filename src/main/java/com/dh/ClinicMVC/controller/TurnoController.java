@@ -2,7 +2,6 @@ package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.entity.DTO.TurnoDTO;
 import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
-import com.dh.ClinicMVC.exception.ResourceNotFoundException;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import com.dh.ClinicMVC.service.IPacienteService;
 import com.dh.ClinicMVC.service.ITurnoService;
@@ -54,24 +53,21 @@ public class TurnoController {
         return ResponseEntity.ok(turnoService.listarTodos());
     }
 
-    @PutMapping
-    public ResponseEntity<TurnoDTO> actualizar(@RequestBody TurnoDTO turnoDTO) {
-        turnoService.actualizar(turnoDTO);
-        return ResponseEntity.ok(turnoDTO);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizar(@PathVariable Long id, @RequestBody TurnoDTO turnoDTO) {
+        try {
+            turnoDTO.setId(id); // Establecer el ID del turno con el ID proporcionado en la URL
+            turnoService.actualizar(turnoDTO); // Llamar al servicio para actualizar el turno
+            return ResponseEntity.ok("Turno actualizado correctamente");
+        } catch (Exception e) {
+            LOGGER.error("Error al actualizar el turno: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
-//    @PutMapping
-//    public ResponseEntity<String> actualizar(@RequestBody TurnoDTO turnoDTO) {
-//        ResponseEntity<String> response;
-//        TurnoDTO turnoDTOBuscar = turnoService.buscarPorId(turnoDTO.getId());
-//        if (turnoDTOBuscar !=null) {
-//            turnoService.actualizar(turnoDTO);
-//            response = ResponseEntity.ok("Se actualizo el turno con id " + turnoDTO.getId());
-//        }else {
-//            response = ResponseEntity.ok("No se pudo actualizar el turno");
-//        }
-//        return response;
-//    }
+    }
 
-}
+
+
+
 
 

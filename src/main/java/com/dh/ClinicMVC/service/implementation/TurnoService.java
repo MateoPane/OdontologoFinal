@@ -1,7 +1,5 @@
 package com.dh.ClinicMVC.service.implementation;
 
-import com.dh.ClinicMVC.controller.PacienteController;
-import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import com.dh.ClinicMVC.entity.DTO.TurnoRequestDTO;
 import com.dh.ClinicMVC.entity.Odontologo;
 import com.dh.ClinicMVC.entity.Paciente;
@@ -89,30 +87,20 @@ public class TurnoService implements ITurnoService {
             LOGGER.info("Se elimino correctamente.");
             turnoRepository.deleteById(id);
         } else {
-            LOGGER.info("No se encontro el turno con id: " + id + " para eliminar");
+            LOGGER.info("No se encontro el turno con id " + id + " para eliminar");
             throw new ResourceNotFoundException("No se encontro el turno con el id: " + id + " para eliminar");
         }
     }
-
-//    @Override
-//    public void actualizar(TurnoDTO turnoDTO) {
-//        Long turnoId = turnoDTO.getId();
-//        Optional<Turno> turnoOptional = turnoRepository.findById(turnoId);
-//        if (turnoOptional.isPresent()) {
-//            Turno turno = mapper.convertValue(turnoDTO, Turno.class);
-//            turnoRepository.save(turno);
-//        } else {
-//            LOGGER.info("No se encontró el turno con ID: " + turnoId + " para actualizar.");
-//            throw new ResourceNotFoundException("No se encontró el turno con el ID: " + turnoId + " para actualizar.");
-//        }
-//    }
     @Override
     public void actualizar(TurnoDTO turnoDTO) {
-        System.out.println(turnoDTO + "turnoDTO");
-        Turno turno = mapper.convertValue(turnoDTO, Turno.class);
-        System.out.println(turno+ " turno");
-        turnoRepository.save(turno);
-
+        Optional<Turno> turnoOptional = turnoRepository.findById(turnoDTO.getId());
+        if (turnoOptional.isPresent()) {
+            Turno turno = turnoOptional.get();
+            turno.setFecha(turnoDTO.getFecha());
+            turnoRepository.save(turno);
+        }else {
+            LOGGER.info("No se encontro el turno con id " + turnoDTO.getId() + " para actualizar.");
+            throw new ResourceNotFoundException("No se encontro el turno con id " + turnoDTO.getId() + " para actualizar.");
+        }
     }
-
 }

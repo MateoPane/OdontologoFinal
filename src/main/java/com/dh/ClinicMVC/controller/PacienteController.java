@@ -1,6 +1,5 @@
 package com.dh.ClinicMVC.controller;
 import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
-import com.dh.ClinicMVC.exception.ResourceNotFoundException;
 import com.dh.ClinicMVC.service.IPacienteService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ public class PacienteController {
 
     @PostMapping("/guardar")
     public ResponseEntity<?> guardar(@RequestBody PacienteDTO pacienteDTO) {
-        LOGGER.info("Se guardo correctamente.");
+        LOGGER.info("Guardando paciente...");
          pacienteService.guardar(pacienteDTO);
          String guardadoExitoso = "Se guardo correctamente el paciente.";
          return ResponseEntity.ok().body(guardadoExitoso);
