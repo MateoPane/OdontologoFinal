@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -25,9 +26,9 @@ public class Paciente {
     private String apellido;
     private String dni;
     private LocalDate fechaIngreso;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
-
     @OneToMany(mappedBy = "paciente")
     @JsonIgnore
     private Set<Turno> turnoSet = new HashSet<>();

@@ -981,3 +981,48 @@
 [2024-03-29 12:52:31] [ ERROR] [TurnoController:35] Error al guardar el turno: The given id must not be null
 [2024-03-29 12:55:08] [ INFO ] [PacienteController:23] Guardando paciente...
 [2024-03-29 12:55:45] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:22:33] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:22:55] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 13:33:48] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:35:12] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:40:45] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:42:40] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:43:00] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:49:16] [ INFO ] [PacienteController:23] Guardando paciente...
+[2024-03-29 13:50:24] [ ERROR] [TurnoController:35] Error al guardar el turno: El odontologo no existe
+[2024-03-29 13:50:28] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 14:03:29] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 14:03:36] [ INFO ] [OdontologoController:41] Se elimino correctamente.
+[2024-03-29 14:03:36] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 14:03:36] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 14:03:39] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 14:04:21] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 14:04:25] [ INFO ] [OdontologoController:41] Se elimino correctamente.
+[2024-03-29 14:04:25] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 14:04:25] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 14:04:27] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 14:39:32] [ INFO ] [PacienteService:70] Se elimino correctamente.
+[2024-03-29 14:39:32] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:39:32] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:39:32] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:48:17] [ INFO ] [PacienteService:70] Se elimino correctamente.
+[2024-03-29 14:48:17] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:48:17] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:48:17] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 14:50:57] [ INFO ] [PacienteService:70] Se elimino correctamente.
+[2024-03-29 14:50:57] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 15:00:15] [ INFO ] [PacienteService:70] Se elimino correctamente.
+[2024-03-29 15:00:15] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 15:03:38] [ INFO ] [PacienteService:70] Se elimino correctamente.
+[2024-03-29 15:03:38] [ INFO ] [PacienteService:60] No se encontro el paciente con id 1
+[2024-03-29 15:20:07] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 15:20:07] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 15:28:56] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 15:28:56] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 15:28:56] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 15:28:56] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 15:44:19] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 15:44:24] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 15:44:27] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 15:44:50] [ INFO ] [OdontologoController:41] Se elimino correctamente.
+[2024-03-29 15:44:50] [ INFO ] [OdontologoService:72] Se elimino correctamente.
