@@ -1053,3 +1053,53 @@
 [2024-03-29 17:20:41] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
 [2024-03-29 17:20:48] [ INFO ] [OdontologoController:21] Se guardo correctamente.
 [2024-03-29 17:20:52] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:57:00] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 17:57:06] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 17:57:12] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 17:57:15] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:57:28] [ INFO ] [OdontologoController:41] Se elimino correctamente.
+[2024-03-29 17:57:28] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 17:57:28] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 18:02:35] [ INFO ] [OdontologoService:75] No se encontro el odontologo con id 4 para eliminar.
+[2024-03-29 19:12:09] [ INFO ] [OdontologoService:75] No se encontro el odontologo con id 4 para eliminar.
+[2024-03-29 19:13:37] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:14:58] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:15:21] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 6
+[2024-03-29 19:15:21] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:15:32] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 6
+[2024-03-29 19:24:48] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:28:15] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:32:38] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:34:22] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:34:27] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 19:34:42] [ INFO ] [OdontologoController:41] Se elimino correctamente.
+[2024-03-29 19:34:42] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 19:34:42] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 19:35:41] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 6
+[2024-03-29 19:35:41] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:36:16] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 6
+[2024-03-29 19:36:16] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:36:46] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:45:14] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:49:45] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 4
+[2024-03-29 19:52:09] [ INFO ] [OdontologoService:75] No se encontro el odontologo con id 4 para eliminar.
+[2024-03-29 19:56:06] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:56:11] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 19:56:11] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 19:56:42] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:57:03] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:57:20] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:57:21] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 19:58:00] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 19:58:00] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 19:58:12] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 19:58:12] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 19:59:21] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 19:59:21] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 20:00:02] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 20:00:02] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 20:00:12] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 6
+[2024-03-29 20:00:12] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 20:00:12] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 20:02:51] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 20:02:51] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1

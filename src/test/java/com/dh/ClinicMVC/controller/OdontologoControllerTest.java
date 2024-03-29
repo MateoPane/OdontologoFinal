@@ -21,7 +21,7 @@ class OdontologoControllerTest {
     private IOdontologoService odontologoService;
 
     @Autowired
-    private IOdontologoRepository odontologoRepository;
+    private IOdontologoRepository iOdontologoRepository;
 
     @Test
     void guardar() {
@@ -56,7 +56,7 @@ class OdontologoControllerTest {
     @Test
     void eliminar() {
         OdontologoDTO odontologo = new OdontologoDTO();
-        odontologo.setId(4L);
+        odontologo.setId(1L);
         odontologo.setNombre("Marina");
         odontologo.setApellido("bar");
         odontologo.setMatricula("mat123");
@@ -68,6 +68,7 @@ class OdontologoControllerTest {
             odontologoService.buscarPorId(odontologo.getId());
         });
     }
+
 
     @Test
     void listarTodos() {
@@ -87,7 +88,7 @@ class OdontologoControllerTest {
     @Test
     void actualizar() {
         OdontologoDTO odontologo = new OdontologoDTO();
-        odontologo.setId(6L);
+        odontologo.setId(1L);
         odontologo.setNombre("Marina");
         odontologo.setApellido("bar");
         odontologo.setMatricula("mat123");
