@@ -51,7 +51,7 @@ public class PacienteService implements IPacienteService {
 
 
     @Override
-    public PacienteDTO buscarPorId(Long id) throws ResourceNotFoundException{
+    public PacienteDTO buscarPorId(Long id) {
         Optional<Paciente> pacienteOptional = pacienteRepository.findById(id);
         PacienteDTO pacienteDTO = null;
         if (pacienteOptional.isPresent()){
@@ -70,8 +70,8 @@ public class PacienteService implements IPacienteService {
             LOGGER.info("Se elimino correctamente.");
             pacienteRepository.deleteById(id);
         } else {
-            LOGGER.info("No se encontro el paciente con id: " + id + " para eliminar");
-            throw new ResourceNotFoundException("No se encontro el paciente con id: " + id + " para eliminar");
+            LOGGER.info("No se encontro el paciente con id " + id + " para eliminar.");
+            throw new ResourceNotFoundException("No se encontro el paciente con id: " + id + " para eliminar.");
         }
     }
 
@@ -82,8 +82,8 @@ public class PacienteService implements IPacienteService {
             Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
             pacienteRepository.save(paciente);
         } else {
-            LOGGER.info("No se encontró el paciente con ID: " + pacienteDTO.getId() + " para actualizar");
-            throw new ResourceNotFoundException("No se encontró el paciente con ID: " + pacienteDTO.getId() + " para actualizar");
+            LOGGER.info("No se encontro el paciente con id " + pacienteDTO.getId() + " para actualizar.");
+            throw new ResourceNotFoundException("No se encontro el paciente con id " + pacienteDTO.getId() + " para actualizar.");
         }
     }
 }

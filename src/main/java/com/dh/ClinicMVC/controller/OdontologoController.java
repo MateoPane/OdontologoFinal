@@ -46,17 +46,15 @@ public class OdontologoController {
     public ResponseEntity<Set<OdontologoDTO>> listarTodos(){
         return ResponseEntity.ok(odontologoService.listarTodos());
     }
-    @PutMapping
-    public ResponseEntity<String> actualizar(@RequestBody OdontologoDTO odontologoDTO) {
-        ResponseEntity<String> response;
-        OdontologoDTO odontologoBuscado = odontologoService.buscarPorId(odontologoDTO.getId());
-        if (odontologoBuscado != null) {
+   @PutMapping("/{id}")
+    public ResponseEntity<?> actualizar(@PathVariable Long id, @RequestBody OdontologoDTO odontologoDTO) {
+        try {
+            odontologoDTO.setId(id);
             odontologoService.actualizar(odontologoDTO);
-            response = ResponseEntity.ok("Se actualizó el odontologo con id " + odontologoDTO.getId());
-        } else {
-            response = ResponseEntity.ok("No se puede actualizar el odontologo");
+            return ResponseEntity.ok("Odontologo actualizado correctamente.");
+        } catch (Exception e) {
+            LOGGER.error("Error al actualizar el odontologo: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
-        return response;
-
-    }
+   }
 }

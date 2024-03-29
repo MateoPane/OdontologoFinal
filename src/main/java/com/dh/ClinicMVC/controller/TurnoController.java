@@ -56,8 +56,8 @@ public class TurnoController {
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@PathVariable Long id, @RequestBody TurnoDTO turnoDTO) {
         try {
-            turnoDTO.setId(id); // Establecer el ID del turno con el ID proporcionado en la URL
-            turnoService.actualizar(turnoDTO); // Llamar al servicio para actualizar el turno
+            turnoDTO.setId(id);
+            turnoService.actualizar(turnoDTO);
             return ResponseEntity.ok("Turno actualizado correctamente");
         } catch (Exception e) {
             LOGGER.error("Error al actualizar el turno: " + e.getMessage());

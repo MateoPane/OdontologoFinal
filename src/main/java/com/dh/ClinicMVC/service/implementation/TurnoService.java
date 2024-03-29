@@ -87,8 +87,8 @@ public class TurnoService implements ITurnoService {
             LOGGER.info("Se elimino correctamente.");
             turnoRepository.deleteById(id);
         } else {
-            LOGGER.info("No se encontro el turno con id " + id + " para eliminar");
-            throw new ResourceNotFoundException("No se encontro el turno con el id: " + id + " para eliminar");
+            LOGGER.info("No se encontro el turno con id " + id + " para eliminar.");
+            throw new ResourceNotFoundException("No se encontro el turno con el id " + id + " para eliminar.");
         }
     }
     @Override
