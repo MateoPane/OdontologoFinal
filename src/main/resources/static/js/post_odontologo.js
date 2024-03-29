@@ -8,8 +8,8 @@ window.addEventListener('load', function () {
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
             matricula: document.querySelector('#matricula').value,
-
         };
+        
         const url = '/odontologos/guardar';
         const settings = {
             method: 'POST',

@@ -1026,3 +1026,30 @@
 [2024-03-29 15:44:27] [ INFO ] [OdontologoController:21] Se guardo correctamente.
 [2024-03-29 15:44:50] [ INFO ] [OdontologoController:41] Se elimino correctamente.
 [2024-03-29 15:44:50] [ INFO ] [OdontologoService:72] Se elimino correctamente.
+[2024-03-29 16:14:07] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 16:15:17] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 16:15:22] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 16:29:56] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 16:30:03] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 16:38:51] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 16:39:33] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 16:56:51] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 16:57:28] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 16:57:43] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 16:58:09] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 16:59:45] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 16:59:45] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 16:59:58] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 17:00:03] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:11:42] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 17:11:47] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:11:51] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:12:00] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:15:44] [ INFO ] [OdontologoService:43] No se encontraron odontologos para listar.
+[2024-03-29 17:15:49] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 17:15:54] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:16:13] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:20:41] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-29 17:20:41] [ INFO ] [OdontologoService:61] No se encontro el odontologo con id 1
+[2024-03-29 17:20:48] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-29 17:20:52] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
