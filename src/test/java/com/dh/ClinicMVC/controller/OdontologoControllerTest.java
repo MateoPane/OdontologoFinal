@@ -1,6 +1,9 @@
 package com.dh.ClinicMVC.controller;
+
 import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
 import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
+import com.dh.ClinicMVC.exception.ResourceNotFoundException;
+import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.service.IOdontologoService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,50 +19,81 @@ import static org.junit.jupiter.api.Assertions.*;
 class OdontologoControllerTest {
     @Autowired
     private IOdontologoService odontologoService;
-    private OdontologoDTO odontologoDTO;
-    @BeforeEach
-    void setup() {
-        this.odontologoDTO = new OdontologoDTO();
-        this.odontologoDTO.setId(1L);
-        this.odontologoDTO.setNombre("Marina");
-        this.odontologoDTO.setApellido("bar");
-        this.odontologoDTO.setMatricula("mat123");
-    }
+
+    @Autowired
+    private IOdontologoRepository odontologoRepository;
+
     @Test
     void guardar() {
-        odontologoService.guardar(this.odontologoDTO);
-        OdontologoDTO odontologoDTO1 = odontologoService.buscarPorId(this.odontologoDTO.getId());
+        OdontologoDTO odontologo = new OdontologoDTO();
+        odontologo.setId(2L);
+        odontologo.setNombre("Marina");
+        odontologo.setApellido("bar");
+        odontologo.setMatricula("mat123");
+
+        odontologoService.guardar(odontologo);
+        OdontologoDTO odontologoDTO1 = odontologoService.buscarPorId(odontologo.getId());
         assertTrue(odontologoDTO1 != null);
     }
 
     @Test
     void buscarPorId() {
-    odontologoService.guardar(this.odontologoDTO);
-    OdontologoDTO odontologoDTO1 = odontologoService.buscarPorId(this.odontologoDTO.getId());
+        OdontologoDTO odontologo = new OdontologoDTO();
+        odontologo.setId(3L);
+        odontologo.setNombre("Marina");
+        odontologo.setApellido("bar");
+        odontologo.setMatricula("mat123");
 
-    assertEquals(this.odontologoDTO, odontologoDTO1);
+        odontologoService.guardar(odontologo);
+        OdontologoDTO odontologoDTO1 = odontologoService.buscarPorId(odontologo.getId());
+
+        assertEquals(odontologo.getId(), odontologoDTO1.getId());
+        assertEquals(odontologo.getApellido(), odontologoDTO1.getApellido());
+        assertEquals(odontologo.getNombre(), odontologoDTO1.getNombre());
+        assertEquals(odontologo.getMatricula(), odontologoDTO1.getMatricula());
     }
+
     @Test
     void eliminar() {
-        odontologoService.guardar(this.odontologoDTO);
-        odontologoService.eliminar(odontologoDTO.getId());
-        OdontologoDTO odontologoDTOEliminado = odontologoService.buscarPorId(this.odontologoDTO.getId());
+        OdontologoDTO odontologo = new OdontologoDTO();
+        odontologo.setId(4L);
+        odontologo.setNombre("Marina");
+        odontologo.setApellido("bar");
+        odontologo.setMatricula("mat123");
 
-        assertNull(odontologoDTOEliminado);
+        odontologoService.guardar(odontologo);
+        odontologoService.eliminar(odontologo.getId());
+
+        assertThrows(ResourceNotFoundException.class, () -> {
+            odontologoService.buscarPorId(odontologo.getId());
+        });
     }
 
     @Test
     void listarTodos() {
-        odontologoService.guardar(this.odontologoDTO);
+        OdontologoDTO odontologo = new OdontologoDTO();
+        odontologo.setId(5L);
+        odontologo.setNombre("Marina");
+        odontologo.setApellido("bar");
+        odontologo.setMatricula("mat123");
+
+        odontologoService.guardar(odontologo);
 
         Set<OdontologoDTO> odontologoDTOS = odontologoService.listarTodos();
 
         assertTrue(odontologoDTOS.size() != 0);
     }
+
     @Test
     void actualizar() {
-        odontologoService.guardar(this.odontologoDTO);
-        OdontologoDTO odontologoDTOEncontrado = odontologoService.buscarPorId(this.odontologoDTO.getId());
+        OdontologoDTO odontologo = new OdontologoDTO();
+        odontologo.setId(6L);
+        odontologo.setNombre("Marina");
+        odontologo.setApellido("bar");
+        odontologo.setMatricula("mat123");
+
+        odontologoService.guardar(odontologo);
+        OdontologoDTO odontologoDTOEncontrado = odontologoService.buscarPorId(odontologo.getId());
 
         odontologoDTOEncontrado.setApellido("Perez");
         odontologoDTOEncontrado.setNombre("Rodrigo");
