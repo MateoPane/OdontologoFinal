@@ -11,35 +11,59 @@ function loadData() {
   fetch(url, settings)
     .then((response) => response.json())
     .then((data) => {
+      let dentistIds = [];
       for (dentist of data) {
         var list = document.getElementById("dentist-list");
         list.innerHTML += buildListItem(dentist);
-        let btn_id = "delete-btn-" + dentist.id;
-        let btn = document.querySelector(`#${btn_id}`);
-
-        btn.addEventListener("click", () => deleteAction(dentist.id));
+        dentistIds.push(dentist.id);
       }
+      return dentistIds;
+    })
+    .then((dentistIds) => {
+      dentistIds.forEach((id) => {
+        let btn_id = "delete-btn-" + id;
+        let btn = document.querySelector(`#${btn_id}`);
+        btn.addEventListener("click", () => deleteAction(id));
+      });
     });
 }
 
 function deleteAction(id) {
-  const url = "/odontologos/" + id;
-  const settings = {
-    method: "DELETE",
-  };
+  Swal.fire({
+    title: "¿Estas seguro?",
+    text: "¡Esta accion no se podrá revertir!",
+    icon: "warning",
+    showCancelButton: true,
+    cancelButtonText: `Cancelar`,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminarlo!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const url = "/odontologos/" + id;
+      const settings = {
+        method: "DELETE",
+      };
 
-  fetch(url, settings)
-    .then((response) => response.json())
-    .then(() => {
-      clearTable();
-      loadData();
-    });
+      fetch(url, settings)
+        .then((response) => response.json())
+        .then(() => {
+          Swal.fire({
+            title: "¡Eliminado!",
+            text: "El odontologo ha sido eliminado.",
+            icon: "success",
+          });
+          clearList();
+          loadData();
+        });
+    }
+  });
 }
 
-function clearTable() {
-  var table = document.getElementById("dentistTableBody");
-  while (table.firstChild) {
-    table.removeChild(table.firstChild);
+function clearList() {
+  var list = document.getElementById("dentist-list");
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
   }
 }
 

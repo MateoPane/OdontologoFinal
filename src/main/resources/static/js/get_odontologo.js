@@ -49,12 +49,12 @@ function deleteAction(id) {
   fetch(url, settings)
     .then((response) => response.json())
     .then(() => {
-      clearTable();
+      clearList();
       loadData();
     });
 }
 
-function clearTable() {
+function clearList() {
   var table = document.getElementById("dentistTableBody");
   while (table.firstChild) {
     table.removeChild(table.firstChild);
