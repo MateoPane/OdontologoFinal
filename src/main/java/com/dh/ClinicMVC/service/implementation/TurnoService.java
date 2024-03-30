@@ -10,7 +10,6 @@ import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.repository.IPacienteRepository;
 import com.dh.ClinicMVC.repository.ITurnoRepository;
 import com.dh.ClinicMVC.service.ITurnoService;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

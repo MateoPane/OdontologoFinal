@@ -15,6 +15,6 @@ public interface ITurnoService {
     void eliminar(Long id);
 
     TurnoDTO guardar(TurnoRequestDTO turnoDTO);
-    TurnoDTO actualizar(Long id, TurnoRequestDTO turnoRequestDTO) throws JsonMappingException;
+    TurnoDTO actualizar(Long id, TurnoRequestDTO turnoRequestDTO);
 }
 

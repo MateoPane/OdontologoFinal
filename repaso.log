@@ -1246,3 +1246,29 @@
 [2024-03-30 00:32:32] [ INFO ] [OdontologoController:21] Se guardo correctamente.
 [2024-03-30 00:32:34] [ INFO ] [PacienteController:22] Guardando paciente...
 [2024-03-30 00:32:34] [ INFO ] [PacienteController:22] Guardando paciente...
+[2024-03-30 13:06:15] [ INFO ] [TurnoService:77] No se encontro el turno con id 1
+[2024-03-30 13:06:30] [ INFO ] [TurnoService:59] No se encontraron turnos para listar.
+[2024-03-30 13:06:45] [ INFO ] [TurnoService:90] No se encontro el turno con id 1 para eliminar.
+[2024-03-30 13:07:03] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-30 13:07:10] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-30 13:07:26] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-30 13:07:31] [ INFO ] [OdontologoController:42] Se elimino correctamente.
+[2024-03-30 13:07:31] [ INFO ] [OdontologoService:68] Se elimino correctamente.
+[2024-03-30 13:07:40] [ INFO ] [OdontologoService:39] No se encontraron odontologos para listar.
+[2024-03-30 13:07:42] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 1
+[2024-03-30 13:07:42] [ INFO ] [OdontologoService:57] No se encontro el odontologo con id 1
+[2024-03-30 13:07:45] [ INFO ] [OdontologoController:42] Se elimino correctamente.
+[2024-03-30 13:07:45] [ INFO ] [OdontologoService:71] No se encontro el odontologo con id 1 para eliminar.
+[2024-03-30 13:07:49] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-30 13:08:01] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-30 13:08:06] [ INFO ] [PacienteService:56] No se encontro el paciente con id 1
+[2024-03-30 13:08:09] [ INFO ] [PacienteService:37] No se encontraron pacientes para listar.
+[2024-03-30 13:08:14] [ INFO ] [PacienteService:81] No se encontro el paciente con id 1 para actualizar.
+[2024-03-30 13:08:14] [ ERROR] [PacienteController:53] Error al actualizar el paciente: No se encontro el paciente con id 1 para actualizar.
+[2024-03-30 13:08:22] [ INFO ] [PacienteController:22] Guardando paciente...
+[2024-03-30 13:08:38] [ INFO ] [PacienteController:31] Se encontro el id 1
+[2024-03-30 13:09:07] [ INFO ] [PacienteController:22] Guardando paciente...
+[2024-03-30 13:10:00] [ INFO ] [OdontologoController:21] Se guardo correctamente.
+[2024-03-30 13:10:05] [ INFO ] [OdontologoController:29] Buscando odontólogo con ID: 4
+[2024-03-30 13:10:13] [ INFO ] [OdontologoController:42] Se elimino correctamente.
+[2024-03-30 13:10:13] [ INFO ] [OdontologoService:68] Se elimino correctamente.
