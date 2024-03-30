@@ -27,10 +27,6 @@ public class PacienteService implements IPacienteService {
     @Override
     public void guardar(PacienteDTO pacienteDTO) {
         Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
-        if (paciente == null) {
-            LOGGER.error("Error al guardar el paciente: El objeto Paciente es nulo.");
-            throw new ResourceNotFoundException("Error al guardar el paciente: El objeto Paciente es nulo.");
-        }
         pacienteRepository.save(paciente);
     }
 

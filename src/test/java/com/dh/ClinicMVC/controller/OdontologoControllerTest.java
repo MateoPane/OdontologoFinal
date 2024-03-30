@@ -8,6 +8,7 @@ import com.dh.ClinicMVC.service.IOdontologoService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -21,7 +22,7 @@ class OdontologoControllerTest {
     private IOdontologoService odontologoService;
 
     @Autowired
-    private IOdontologoRepository iOdontologoRepository;
+    private OdontologoController odontologoController;
 
     @Test
     void guardar() {
@@ -31,9 +32,14 @@ class OdontologoControllerTest {
         odontologo.setApellido("bar");
         odontologo.setMatricula("mat123");
 
-        odontologoService.guardar(odontologo);
+        odontologoController.guardar(odontologo);
+
         OdontologoDTO odontologoDTO1 = odontologoService.buscarPorId(odontologo.getId());
         assertTrue(odontologoDTO1 != null);
+        assertEquals(odontologo.getId(), odontologoDTO1.getId());
+        assertEquals(odontologo.getApellido(), odontologoDTO1.getApellido());
+        assertEquals(odontologo.getNombre(), odontologoDTO1.getNombre());
+        assertEquals(odontologo.getMatricula(), odontologoDTO1.getMatricula());
     }
 
     @Test
@@ -62,7 +68,7 @@ class OdontologoControllerTest {
         odontologo.setMatricula("mat123");
 
         odontologoService.guardar(odontologo);
-        odontologoService.eliminar(odontologo.getId());
+        odontologoController.eliminar(odontologo.getId());
 
         assertThrows(ResourceNotFoundException.class, () -> {
             odontologoService.buscarPorId(odontologo.getId());

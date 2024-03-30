@@ -29,10 +29,6 @@ public class OdontologoService implements IOdontologoService {
     @Override
     public void guardar(OdontologoDTO odontologoDTO) {
         Odontologo odontologo = mapper.convertValue(odontologoDTO, Odontologo.class);
-        if (odontologo == null) {
-            LOGGER.error("Error al guardar el odontologo, El objeto odontologo es nulo.");
-            throw new ResourceNotFoundException("Error al guardar el odontologo, El objeto odontologo es nulo.");
-        }
         odontologoRepository.save(odontologo);
     }
 

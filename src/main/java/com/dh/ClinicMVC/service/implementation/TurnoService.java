@@ -38,10 +38,8 @@ public class TurnoService implements ITurnoService {
     public TurnoDTO guardar(TurnoRequestDTO turnoDTO) {
         Odontologo odontologo = odontologoRepository.findById(turnoDTO.getOdontologoId())
                 .orElseThrow(() -> new ResourceNotFoundException("El odontologo no existe"));
-        System.out.println(odontologo);
         Paciente paciente = pacienteRepository.findById(turnoDTO.getPacienteId())
                 .orElseThrow(() -> new ResourceNotFoundException("El paciente no existe"));
-        System.out.println(paciente);
 
         Turno turno = new Turno();
         turno.setOdontologo(odontologo);

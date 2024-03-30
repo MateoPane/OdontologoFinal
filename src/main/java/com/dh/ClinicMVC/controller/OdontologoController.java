@@ -22,8 +22,8 @@ public class OdontologoController {
         odontologoService.guardar(odontologoDTO);
         String guardadoExitoso = "Se guardo correctamente el odontologo.";
         return ResponseEntity.ok().body(guardadoExitoso);
-
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Long id) {
         LOGGER.info("Buscando odontólogo con ID: " + id);
@@ -36,6 +36,7 @@ public class OdontologoController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeError);
         }
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminar(@PathVariable Long id) {
         LOGGER.info("Se elimino correctamente.");
