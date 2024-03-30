@@ -1,14 +1,9 @@
 package com.dh.ClinicMVC.controller;
 
 import com.dh.ClinicMVC.entity.DTO.OdontologoDTO;
-import com.dh.ClinicMVC.entity.DTO.PacienteDTO;
 import com.dh.ClinicMVC.exception.ResourceNotFoundException;
-import com.dh.ClinicMVC.repository.IOdontologoRepository;
 import com.dh.ClinicMVC.service.IOdontologoService;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
